@@ -4,6 +4,237 @@
   
     
     <entry>
+      <title>《Kubernetes in Action中文版》</title>
+      <link href="/2023/05/24/Kubernetes%20in%20Action%E4%B8%AD%E6%96%87%E7%89%88/"/>
+      <url>/2023/05/24/Kubernetes%20in%20Action%E4%B8%AD%E6%96%87%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/4311db6aa915c642bafafcf5873fd2d5.png" alt="《Kubernetes in Action中文版》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Kubernetes in Action中文版》主要讲解如何在 Kubernetes 中部署分布式容器应用。《Kubernetes in Action中文版》开始部分概要介绍了 Docker 和Kubernetes 的由来和发展，然后通过在 Kubernetes 中部署一个应用程序，一点点增加功能，逐步加深我们对于Kubernetes架构的理解和操作的实践。在本书的后面部分，也可以学习一些高阶的主题，比如监控、调试及伸缩。 Kubernetes是希腊文，意思是“舵手”，带领我们安全地到达未知水域。Kubernetes这样的容器编排系统，会帮助我们妥善地管理分布式应用的部署结构和线上流量，高效地组织容器和服务。Kubernetes 作为数据中心操作系统，在设计软件系统时，能够尽量降低在底层网络和硬件设施上的负担。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>Marko Luksa是一位拥有20年以上专业开发经验的软件工程师，经手项目小到简单的Web应用，大到ERP系统、框架和中间件软件，应有尽有。在为Red Hat工作期间，他从Google App Engine API实现的开发起步, 这些API将基于Red Hat的JBoss中间件产品，之后他一直在为CDI&#x2F;Weld、Infinispan&#x2F;JBoss DataGrid等项目贡献力量。2014后, 他加入Red Hat的Cloud Enablement团队，负责 Kubernetes和相关技术开发的更新，保障公司的中间件软件能将Kubernetes与OpenShift特性的潜能用到极致。 译者简介 七牛容器云 （KIRK）团队，是负责七牛云基于自身公有云业务在容器方面的多年实践经验，针对企业应用快速部署、便捷运维打造的容器云计算平台。提供持续集成、弹性伸缩、应用市场等功能特性，使企业专注于业务逻辑开发，缩短业务上线周期，优化资源利用率，提高服务响应效率的一支技术团队。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>1Kubernetes介绍1<br>1.1Kubernetes系统的需求2<br>1.1.1从单体应用到微服务2<br>1.1.2为应用程序提供一个一致的环境5<br>1.1.3迈向持续交付：DevOps和无运维6<br>1.2介绍容器技术7<br>1.2.1什么是容器7<br>1.2.2Docker容器平台介绍11<br>1.2.3rkt——一个Docker的替代方案14<br>1.3Kubernetes介绍15<br>1.3.1初衷15<br>1.3.2深入浅出地了解Kubernetes15<br>1.3.3Kubernetes集群架构17<br>1.3.4在Kubernetes中运行应用18<br>1.3.5使用Kubernetes的好处20<br>1.4本章小结22<br>2开始使用Kubernetes和Docker23<br>2.1创建、运行及共享容器镜像23<br>2.1.1安装Docker并运行HelloWorld容器24<br>2.1.2创建一个简单的Node.js应用26<br>2.1.3为镜像创建Dockerfile27<br>2.1.4构建容器镜像27<br>2.1.5运行容器镜像30<br>2.1.6探索运行容器的内部31<br>2.1.7停止和删除容器32<br>2.1.8向镜像仓库推送镜像33<br>2.2配置Kubernetes集群34<br>2.2.1用Minikube运行一个本地单节点Kubernetes集群34<br>2.2.2使用GoogleKubernetesEngine托管Kubernetes集群36<br>2.2.3为kubectl配置别名和命令行补齐39<br>2.3在Kubernetes上运行第一个应用40<br>2.3.1部署Node.js应用40<br>2.3.2访问Web应用43<br>2.3.3系统的逻辑部分45<br>2.3.4水平伸缩应用46<br>2.3.5查看应用运行在哪个节点上49<br>2.3.6介绍Kubernetesdashboard50<br>2.4本章小结51<br>3pod：运行于Kubernetes中的容器53<br>3.1介绍pod53<br>3.1.1为何需要pod54<br>3.1.2了解pod55<br>3.1.3通过pod合理管理容器56<br>3.2以YAML或JSON描述文件创建pod58<br>3.2.1检查现有pod的YAML描述文件59<br>3.2.2为pod创建一个简单的YAML描述文件61<br>3.2.3使用kubectlcreate来创建pod63<br>3.2.4查看应用程序日志64<br>3.2.5向pod发送请求65<br>3.3使用标签组织pod66<br>3.3.1介绍标签66<br>3.3.2创建pod时指定标签67<br>3.3.3修改现有pod的标签68<br>3.4通过标签选择器列出pod子集69<br>3.4.1使用标签选择器列出pod69<br>3.4.2在标签选择器中使用多个条件71<br>3.5使用标签和选择器来约束pod调度71<br>3.5.1使用标签分类工作节点72<br>3.5.2将pod调度到特定节点72<br>3.5.3调度到一个特定节点73<br>3.6注解pod73<br>3.6.1查找对象的注解74<br>3.6.2添加和修改注解74<br>3.7使用命名空间对资源进行分组75<br>3.7.1了解对命名空间的需求75<br>3.7.2发现其他命名空间及其pod75<br>3.7.3创建一个命名空间76<br>3.7.4管理其他命名空间中的对象77<br>3.7.5命名空间提供的隔离78<br>3.8停止和移除pod78<br>3.8.1按名称删除pod78<br>3.8.2使用标签选择器删除pod79<br>3.8.3通过删除整个命名空间来删除pod80<br>3.8.4删除命名空间中的所有pod，但保留命名空间80<br>3.8.5删除命名空间中的（几乎）所有资源80<br>3.9本章小结81<br>4副本机制和其他控制器：部署托管的pod83<br>4.1保持pod健康84<br>4.1.1介绍存活探针84<br>4.1.2创建基于HTTP的存活探针85<br>4.1.3使用存活探针86<br>4.1.4配置存活探针的附加属性87<br>4.1.5创建有效的存活探针88<br>4.2了解ReplicationController89<br>4.2.1ReplicationController的操作90<br>4.2.2创建一个ReplicationController92<br>4.2.3使用ReplicationController94<br>4.2.4将pod移入或移出ReplicationController的作用域97<br>4.2.5修改pod模板100<br>4.2.6水平缩放pod101<br>4.2.7删除一个ReplicationController103<br>4.3使用ReplicaSet而不是ReplicationController104<br>4.3.1比较ReplicaSet和ReplicationController104<br>4.3.2定义ReplicaSet105<br>4.3.3创建和检查ReplicaSet106<br>4.3.4使用ReplicaSet的更富表达力的标签选择器106<br>4.3.5ReplicaSet小结107<br>4.4使用DaemonSet在每个节点上运行一个pod107<br>4.4.1使用DaemonSet在每个节点上运行一个pod108<br>4.4.2使用DaemonSet只在特定的节点上运行pod109<br>4.5运行执行单个任务的pod112<br>4.5.1介绍Job资源112<br>4.5.2定义Job资源113<br>4.5.3看Job运行一个pod114<br>4.5.4在Job中运行多个pod实例114<br>4.5.5限制Jobpod完成任务的时间116<br>4.6安排Job定期运行或在将来运行一次116<br>4.6.1创建一个CronJob116<br>4.6.2了解计划任务的运行方式118<br>4.7本章小结118<br>5服务：让客户端发现pod并与之通信121<br>5.1介绍服务122<br>5.1.1创建服务123<br>5.1.2服务发现129<br>5.2连接集群外部的服务132<br>5.2.1介绍服务endpoint133<br>5.2.2手动配置服务的endpoint133<br>5.2.3为外部服务创建别名135<br>5.3将服务暴露给外部客户端136<br>5.3.1使用NodePort类型的服务137<br>5.3.2通过负载均衡器将服务暴露出来140<br>5.3.3了解外部连接的特性142<br>5.4通过Ingress暴露服务143<br>5.4.1创建Ingress资源145<br>5.4.2通过Ingress访问服务146<br>5.4.3通过相同的Ingress暴露多个服务147<br>5.4.4配置Ingress处理TLS传输149<br>5.5pod就绪后发出信号150<br>5.5.1介绍就绪探针151<br>5.5.2向pod添加就绪探针152<br>5.5.3了解就绪探针的实际作用154<br>5.6使用headless服务来发现独立的pod155<br>5.6.1创建headless服务156<br>5.6.2通过DNS发现pod156<br>5.6.3发现所有的pod——包括未就绪的pod157<br>5.7排除服务故障158<br>5.8本章小结159<br>6卷：将磁盘挂载到容器161<br>6.1介绍卷162<br>6.1.1卷的应用示例162<br>6.1.2介绍可用的卷类型164<br>6.2通过卷在容器之间共享数据165<br>6.2.1使用emptyDir卷165<br>6.2.2使用Git仓库作为存储卷168<br>6.3访问工作节点文件系统上的文件171<br>6.3.1介绍hostPath卷171<br>6.3.2检查使用hostPath卷的系统pod172<br>6.4使用持久化存储173<br>6.4.1使用GCE持久磁盘作为pod存储卷174<br>6.4.2通过底层持久化存储使用其他类型的卷177<br>6.5从底层存储技术解耦pod179<br>6.5.1介绍持久卷和持久卷声明179<br>6.5.2创建持久卷180<br>6.5.3通过创建持久卷声明来获取持久卷182<br>6.5.4在pod中使用持久卷声明184<br>6.5.5了解使用持久卷和持久卷声明的好处185<br>6.5.6回收持久卷186<br>6.6持久卷的动态卷配置187<br>6.6.1通过StorageClass资源定义可用存储类型188<br>6.6.2请求持久卷声明中的存储类188<br>6.6.3不指定存储类的动态配置190<br>6.7本章小结193<br>7ConfigMap和Secret：配置应用程序195<br>7.1配置容器化应用程序195<br>7.2向容器传递命令行参数196<br>7.2.1在Docker中定义命令与参数196<br>7.2.2在Kubernetes中覆盖命令和参数199<br>7.3为容器设置环境变量200<br>7.3.1在容器定义中指定环境变量201<br>7.3.2在环境变量值中引用其他环境变量201<br>7.3.3了解硬编码环境变量的不足之处202<br>7.4利用ConfigMap解耦配置202<br>7.4.1ConfigMap介绍202<br>7.4.2创建ConfigMap203<br>7.4.3给容器传递ConfigMap条目作为环境变量206<br>7.4.4一次性传递ConfigMap的所有条目作为环境变量208<br>7.4.5传递ConfigMap条目作为命令行参数209<br>7.4.6使用configMap卷将条目暴露为文件210<br>7.4.7更新应用配置且不重启应用程序216<br>7.5使用Secret给容器传递敏感数据218<br>7.5.1介绍Secret218<br>7.5.2默认令牌Secret介绍218<br>7.5.3创建Secret220<br>7.5.4对比ConfigMap与Secret221<br>7.5.5在pod中使用Secret222<br>7.6本章小结228<br>8从应用访问pod元数据以及其他资源229<br>8.1通过DownwardAPI传递元数据229<br>8.1.1了解可用的元数据230<br>8.1.2通过环境变量暴露元数据231<br>8.1.3通过downwardAPI卷来传递元数据234<br>8.2与KubernetesAPI服务器交互237<br>8.2.1探究KubernetesRESTAPI238<br>8.2.2从pod内部与API服务器进行交互242<br>8.2.3通过ambassador容器简化与API服务器的交互248<br>8.2.4使用客户端库与API服务器交互251<br>8.3本章小结253<br>9Deployment:声明式地升级应用255<br>9.1更新运行在pod内的应用程序256<br>9.1.1删除旧版本pod，使用新版本pod替换257<br>9.1.2先创建新pod再删除旧版本pod257<br>9.2使用ReplicationController实现自动的滚动升级259<br>9.2.1运行第一个版本的应用259<br>9.2.2使用kubectl来执行滚动式升级261<br>9.2.3为什么kubectlrolling-update已经过时265<br>9.3使用Deployment声明式地升级应用266<br>9.3.1创建一个Deployment267<br>9.3.2升级Deployment269<br>9.3.3回滚Deployment273<br>9.3.4控制滚动升级速率276<br>9.3.5暂停滚动升级278<br>9.3.6阻止出错版本的滚动升级279<br>9.4本章小结284<br>10StatefulSet：部署有状态的多副本应用285<br>10.1复制有状态pod285<br>10.1.1运行每个实例都有单独存储的多副本286<br>10.1.2每个pod都提供稳定的标识287<br>10.2了解Statefulset289<br>10.2.1对比Statefulset和ReplicaSet289<br>10.2.2提供稳定的网络标识290<br>10.2.3为每个有状态实例提供稳定的专属存储292<br>10.2.4Statefulset的保障294<br>10.3使用Statefulset295<br>10.3.1创建应用和容器镜像295<br>10.3.2通过Statefulset部署应用296<br>10.3.3使用你的pod301<br>10.4在Statefulset中发现伙伴节点305<br>10.4.1通过DNS实现伙伴间彼此发现306<br>10.4.2更新Statefulset308<br>10.4.3尝试集群数据存储309<br>10.5了解Statefulset如何处理节点失效310<br>10.5.1模拟一个节点的网络断开310<br>10.5.2手动删除pod312<br>10.6本章小结313<br>11了解Kubernetes机理315<br>11.1了解架构315<br>11.1.1Kubernetes组件的分布式特性316<br>11.1.2Kubernetes如何使用etcd318<br>11.1.3API服务器做了什么322<br>11.1.4API服务器如何通知客户端资源变更324<br>11.1.5了解调度器325<br>11.1.6介绍控制器管理器中运行的控制器327<br>11.1.7Kubelet做了什么331<br>11.1.8KubernetesServiceProxy的作用332<br>11.1.9介绍Kubernetes插件333<br>11.1.10总结概览335<br>11.2控制器如何协作335<br>11.2.1了解涉及哪些组件335<br>11.2.2事件链336<br>11.2.3观察集群事件337<br>11.3了解运行中的pod是什么339<br>11.4跨pod网络340<br>11.4.1网络应该是什么样的340<br>11.4.2深入了解网络工作原理341<br>11.4.3引入容器网络接口343<br>11.5服务是如何实现的344<br>11.5.1引入kube-proxy344<br>11.5.2kube-proxy如何使用iptables344<br>11.6运行高可用集群346<br>11.6.1让你的应用变得高可用346<br>11.6.2让Kubernetes控制平面变得高可用347<br>11.7本章小结350<br>12KubernetesAPI服务器的安全防护351<br>12.1了解认证机制351<br>12.1.1用户和组352<br>12.1.2ServiceAccount介绍353<br>12.1.3创建ServiceAccount354<br>12.1.4将ServiceAccount分配给pod356<br>12.2通过基于角色的权限控制加强集群安全358<br>12.2.1介绍RBAC授权插件359<br>12.2.2介绍RBAC资源360<br>12.2.3使用Role和RoleBinding363<br>12.2.4使用ClusterRole和ClusterRoleBinding367<br>12.2.5了解默认的ClusterRole和ClusterRoleBinding376<br>12.2.6理性地授予授权权限379<br>12.3本章小结379<br>13保障集群内节点和网络安全381<br>13.1在pod中使用宿主节点的Linux命名空间381<br>13.1.1在pod中使用宿主节点的网络命名空间382<br>13.1.2绑定宿主节点上的端口而不使用宿主节点的网络命名空间383<br>13.1.3使用宿主节点的PID与IPC命名空间385<br>13.2配置节点的安全上下文386<br>13.2.1使用指定用户运行容器387<br>13.2.2阻止容器以root用户运行388<br>13.2.3使用特权模式运行pod389<br>13.2.4为容器单独添加内核功能390<br>13.2.5在容器中禁用内核功能391<br>13.2.6阻止对容器根文件系统的写入392<br>13.2.7容器使用不同用户运行时共享存储卷394<br>13.3限制pod使用安全相关的特性396<br>13.3.1PodSecurityPolicy资源介绍396<br>13.3.2了解runAsUser、fsGroup和supplementalGroup策略398<br>13.3.3配置允许、默认添加、禁止使用的内核功能400<br>13.3.4限制pod可以使用的存储卷类型402<br>13.3.5对不同的用户与组分配不同的PodSecurityPolicy402<br>13.4隔离pod的网络406<br>13.4.1在一个命名空间中启用网络隔离406<br>13.4.2允许同一命名空间中的部分pod访问一个服务端pod407<br>13.4.3在不同Kubernetes命名空间之间进行网络隔离408<br>13.4.4使用CIDR隔离网络409<br>13.4.5限制pod的对外访问流量409<br>13.5本章小结410<br>14计算资源管理411<br>14.1为pod中的容器申请资源411<br>14.1.1创建包含资源requests的pod412<br>14.1.2资源requests如何影响调度413<br>14.1.3CPUrequests如何影响CPU时间分配418<br>14.1.4定义和申请自定义资源418<br>14.2限制容器的可用资源419<br>14.2.1设置容器可使用资源量的硬限制419<br>14.2.2超过limits421<br>14.2.3容器中的应用如何看待limits422<br>14.3了解podQoS等级423<br>14.3.1定义pod的QoS等级424<br>14.3.2内存不足时哪个进程会被杀死426<br>14.4为命名空间中的pod设置默认的requests和limits427<br>14.4.1LimitRange资源简介428<br>14.4.2LimitRange对象的创建428<br>14.4.3强制进行限制430<br>14.4.4应用资源requests和limits的默认值430<br>14.5限制命名空间中的可用资源总量431<br>14.5.1ResourceQuota资源介绍431<br>14.5.2为持久化存储指定配额434<br>14.5.3限制可创建对象的个数434<br>14.5.4为特定的pod状态或者QoS等级指定配额435<br>14.6监控pod的资源使用量436<br>14.6.1收集、获取实际资源使用情况437<br>14.6.2保存并分析历史资源的使用统计信息439<br>14.7本章小结442<br>15自动横向伸缩pod与集群节点443<br>15.1pod的横向自动伸缩444<br>15.1.1了解自动伸缩过程444<br>15.1.2基于CPU使用率进行自动伸缩447<br>15.1.3基于内存使用进行自动伸缩453<br>15.1.4基于其他自定义度量进行自动伸缩453<br>15.1.5确定哪些度量适合用于自动伸缩456<br>15.1.6缩容到0个副本456<br>15.2pod的纵向自动伸缩456<br>15.2.1自动配置资源请求457<br>15.2.2修改运行中pod的资源请求457<br>15.3集群节点的横向伸缩457<br>15.3.1ClusterAutoscaler介绍457<br>15.3.2启用ClusterAutoscaler459<br>15.3.3限制集群缩容时的服务干扰460<br>15.4本章小结461<br>16高级调度463<br>16.1使用污点和容忍度阻止节点调度到特定节点463<br>16.1.1介绍污点和容忍度464<br>16.1.2在节点上添加自定义污点466<br>16.1.3在pod上添加污点容忍度467<br>16.1.4了解污点和污点容忍度的使用场景467<br>16.2使用节点亲缘性将pod调度到特定节点上469<br>16.2.1指定强制性节点亲缘性规则470<br>16.2.2调度pod时优先考虑某些节点472<br>16.3使用pod亲缘性与非亲缘性对pod进行协同部署475<br>16.3.1使用pod间亲缘性将多个pod部署在同一个节点上475<br>16.3.2将pod部署在同一机柜、可用性区域或者地理地域478<br>16.3.3表达pod亲缘性优先级取代强制性要求479<br>16.3.4利用pod的非亲缘性分开调度pod481<br>16.4本章小结483<br>17开发应用的最佳实践485<br>17.1集中一切资源486<br>17.2了解pod的生命周期487<br>17.2.1应用必须预料到会被杀死或者重新调度487<br>17.2.2重新调度死亡的或者部分死亡的pod490<br>17.2.3以固定顺序启动pod491<br>17.2.4增加生命周期钩子493<br>17.2.5了解pod的关闭497<br>17.3确保所有的客户端请求都得到了妥善处理500<br>17.3.1在pod启动时避免客户端连接断开500<br>17.3.2在pod关闭时避免客户端连接断开501<br>17.4让应用在Kubernetes中方便运行和管理505<br>17.4.1构建可管理的容器镜像505<br>17.4.2合理地给镜像打标签，正确地使用ImagePullPolicy506<br>17.4.3使用多维度而不是单维度的标签506<br>17.4.4通过注解描述每个资源506<br>17.4.5给进程终止提供更多的信息507<br>17.4.6处理应用日志508<br>17.5开发和测试的最佳实践510<br>17.5.1开发过程中在Kubernetes之外运行应用510<br>17.5.2在开发过程中使用Minikube512<br>17.5.3发布版本和自动部署资源清单513<br>17.5.4使用Ksonnet作为编写YAML&#x2F;JSONmanifest文件的额外选择513<br>17.5.5利用持续集成和持续交付514<br>17.6本章小结515<br>18Kubernetes应用扩展517<br>18.1定义自定义API对象517<br>18.1.1CustomResourceDefinitions介绍518<br>18.1.2使用自定义控制器自动定制资源522<br>18.1.3验证自定义对象526<br>18.1.4为自定义对象提供自定义API服务器527<br>18.2使用Kubernetes服务目录扩展Kubernetes528<br>18.2.1服务目录介绍529<br>18.2.2服务目录API服务器与控制器管理器介绍530<br>18.2.3Service代理和OpenServiceBrokerAPI530<br>18.2.4提供服务与使用服务533<br>18.2.5解除绑定与取消配置535<br>18.2.6服务目录给我们带来了什么535<br>18.3基于Kubernetes搭建的平台536<br>18.3.1红帽OpenShift容器平台536<br>18.3.2DeisWorkflow与Helm539<br>18.4本章小结541<br>A在多个集群中使用kubectl543<br>B使用kubeadm配置多节点集群549<br>C使用其他容器运行时563<br>DClusterFederation567</p><h3 id="Kubernetes-in-Action中文版-PDF-下载地址"><a href="#Kubernetes-in-Action中文版-PDF-下载地址" class="headerlink" title="Kubernetes in Action中文版 PDF 下载地址:"></a>Kubernetes in Action中文版 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1CRbC3wYt6HAqo8IQIGqJ7A?pwd=nsfm">https://pan.baidu.com/s/1CRbC3wYt6HAqo8IQIGqJ7A?pwd=nsfm</a> </p><p>提取码: nsfm </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Kubernetes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Lua程序设计》</title>
+      <link href="/2023/05/24/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+      <url>/2023/05/24/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/cf9e4f3d7bd23092d0bd78cf82db10d1.png" alt="《Lua程序设计》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Lua程序设计（第4版）》由Lua 语言作者亲自撰写，针对Lua 语言本身由浅入深地从各个方面进行了完整和细致的讲解。作为第4 版，《Lua程序设计（第4版）》主要针对的是Lua 5.3，这是《Lua程序设计（第4版）》撰写时Lua 语言的最新版本。作者从语言使用者的角度出发，讲解了语言基础、编程实操、高级特性及C 语言API 等四个方面的内容，既有Lua 语言基本数据类型、输入输出、控制结构等基础知识，也有对模块、闭包、元表、协程、延续、反射、环境、垃圾回收、函数式编程、面向对象编程、C 语言API 等高级特性的系统讲解，还有对Lua 5.3 中引入的整型、位运算、瞬表、延续等新功能的细致说明。 所有与Lua 语言打交道的人均能从《Lua程序设计（第4版）》受益，包括游戏、嵌入式、物联网、软件安全、逆向工程、移动互联网、C 语言核心系统开发等诸多领域中对Lua 语言有一般使用需要的从业人员，以及需要从编译原理或语言设计哲学和实现角度深入学习Lua 语言脚本引擎的高级开发者或研究人员。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>无</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第 1 部分 语言基础 1<br>1 Lua 语言入门 2<br>1.1 程序段 3<br>1.2 一些词法规范 5<br>1.3 全局变量 7<br>1.4 类型和值 7<br>1.4.1 nil 8<br>1.4.2 Boolean 8<br>1.5 独立解释器 10<br>1.6 练习 12<br>2 小插曲：八皇后问题 13<br>2.1 练习 15<br>3 数值 17<br>3.1 数值常量 17<br>3.2 算术运算 19<br>3.3 关系运算 21<br>3.4 数学库 21<br>3.4.1 随机数发生器 22<br>3.4.2 取整函数 22<br>3.5 表示范围 24<br>3.6 惯例 25<br>3.7 运算符优先级 26<br>3.8 兼容性 27<br>3.9 练习 28<br>4 字符串 30<br>4.1 字符串常量 31<br>4.2 长字符串&#x2F;多行字符串 33<br>4.3 强制类型转换 34<br>4.4 字符串标准库 36<br>4.5 Unicode 编码 39<br>4.6 练习 41<br>5 表 43<br>5.1 表索引 44<br>5.2 表构造器 46<br>5.3 数组、列表和序列 48<br>5.4 遍历表 50<br>5.5 安全访问 52<br>5.6 表标准库 53<br>5.7 练习 54<br>6 函数 56<br>6.1 多返回值 58<br>6.2 可变长参数函数 61<br>6.3 函数 table.unpack 64<br>6.4 正确的尾调用 65<br>6.5 练习 66<br>7 输入输出 68<br>7.1 简单 I&#x2F;O 模型 68<br>7.2 完整 I&#x2F;O 模型 72<br>7.3 其他文件操作 74<br>7.4 其他系统调用 75<br>7.4.1 运行系统命令 75<br>7.5 练习 77<br>8 补充知识 78<br>8.1 局部变量和代码块 78<br>8.2 控制结构 80<br>8.2.1 if then else 81<br>8.2.2 while 81<br>8.2.3 repeat 82<br>8.2.4 数值型 for 82<br>8.2.5 泛型 for 83<br>8.3 break、return 和 goto 84<br>8.4 练习 88<br>第 2 部分 编程实操 90<br>9 闭包 91<br>9.1 函数是第一类值 92<br>9.2 非全局函数 94<br>9.3 词法定界 96<br>9.4 小试函数式编程 100<br>9.5 练习 103<br>10 模式匹配 105<br>10.1 模式匹配的相关函数 105<br>10.1.1 函数 string.find 105<br>10.1.2 函数 string.match 106<br>10.1.3 函数 string.gsub 107<br>10.1.4 函数 string.gmatch 107<br>10.2 模式 108<br>10.3 捕获 112<br>10.4 替换 114<br>10.4.1 URL 编码 116<br>10.4.2 制表符展开 118<br>10.5 诀窍 119<br>10.6 练习 123<br>11 小插曲：出现频率最高的单词 124<br>11.1 练习 126<br>12 日期和时间 128<br>12.1 函数 os.time 129<br>12.2 函数 os.date 130<br>12.3 日期和时间处理 132<br>12.4 练习 134<br>13 位和字节 135<br>13.1 位运算 135<br>13.2 无符号整型数 136<br>13.3 打包和解包二进制数据 139<br>13.4 二进制文件 142<br>13.5 练习 144<br>14 数据结构 145<br>14.1 数组 146<br>14.2 矩阵及多维数组 146<br>14.3 链表 149<br>14.4 队列及双端队列 150<br>14.5 反向表 151<br>14.6 集合与包 152<br>14.7 字符串缓冲区 154<br>14.8 图形 156<br>14.9 练习 158<br>15 数据文件和序列化 159<br>15.1 数据文件 160<br>15.2 序列化 162<br>15.2.1 保存不带循环的表 165<br>15.2.2 保存带有循环的表 167<br>15.3 练习 169<br>16 编译、执行和错误 171<br>16.1 编译 171<br>16.2 预编译的代码 175<br>16.3 错误 177<br>16.4 错误处理和异常 179<br>16.5 错误信息和栈回溯 180<br>16.6 练习 182<br>17 模块和包 184<br>17.1 函数 require 185<br>17.1.1 模块重命名 187<br>17.1.2 搜索路径 188<br>17.1.3 搜索器 190<br>17.2 Lua 语言中编写模块的基本方法 190<br>17.3 子模块和包 193<br>17.4 练习 194<br>第 3 部分 语言特性 196<br>18 迭代器和泛型 for 197<br>18.1 迭代器和闭包 197<br>18.2 泛型 for 的语法 200<br>18.3 无状态迭代器 201<br>18.4 按顺序遍历表 203<br>18.5 迭代器的真实含义 205<br>18.6 练习 206<br>19 小插曲：马尔可夫链算法 208<br>19.1 练习 211<br>20 元表和元方法 212<br>20.1 算术运算相关的元方法 213<br>20.2 关系运算相关的元方法 216<br>20.3 库定义相关的元方法 217<br>20.4 表相关的元方法 219<br>20.4.1 __index 元方法 219<br>20.4.2 __newindex 元方法 220<br>20.4.3 具有默认值的表 221<br>20.4.4 跟踪对表的访问 222<br>20.4.5 只读的表 224<br>20.5 练习 225<br>21 面向对象（Object-Oriented）编程 226<br>21.1 类（Class） 228<br>21.2 继承（Inheritance） 230<br>21.3 多重继承（Multiple Inheritance） 232<br>21.4 私有性（Privacy） 235<br>21.5 单方法对象（Single-method Object） 237<br>21.6 对偶表示（Dual Representation） 238<br>21.7 练习 240<br>22 环境（Environment） 241<br>22.1 具有动态名称的全局变量 242<br>22.2 全局变量的声明 243<br>22.3 非全局环境 246<br>22.4 使用 _ENV 248<br>22.5 环境和模块 251<br>22.6 _ENV 和 load 252<br>22.7 练习 254<br>23 垃圾收集 255<br>23.1 弱引用表 255<br>23.2 记忆函数（Memorize Function） 257<br>23.3 对象属性（Object Attribute） 259<br>23.4 回顾具有默认值的表 260<br>23.5 瞬表（Ephemeron Table） 261<br>23.6 析构器（Finalizer） 262<br>23.7 垃圾收集器 266<br>23.8 控制垃圾收集的步长（Pace） 267<br>23.9 练习 268<br>24 协程（Coroutine） 270<br>24.1 协程基础 270<br>24.2 哪个协程占据主循环 273<br>24.3 将协程用作迭代器 276<br>24.4 事件驱动式编程 279<br>24.5 练习 284<br>25 反射（Reflection） 285<br>25.1 自省机制（Introspective Facility） 286<br>25.1.1 访问局部变量 288<br>25.1.2 访问非局部变量 289<br>25.1.3 访问其他协程 291<br>25.2 钩子（Hook） 292<br>25.3 调优（Profile） 293<br>25.4 沙盒（Sandbox） 296<br>25.5 练习 300<br>26 小插曲：使用协程实现多线程 301<br>26.1 练习 306<br>第 4 部分 C 语言 API 307<br>27 C 语言 API 总览 308<br>27.1 第一个示例 309<br>27.2 栈 312<br>27.2.1 压入元素 313<br>27.2.2 查询元素 314<br>27.2.3 其他栈操作 317<br>27.3 使用 C API 进行错误处理 320<br>27.3.1 处理应用代码中的错误 320<br>27.3.2 处理库代码中的错误 321<br>27.4 内存分配 322<br>27.5 练习 324<br>28 扩展应用 325<br>28.1 基础知识 325<br>28.2 操作表 327<br>28.2.1 一些简便方法 331<br>28.3 调用 Lua 函数 333<br>28.4 一个通用的调用函数 334<br>28.5 练习 338<br>29 在 Lua 中调用 C 语言 339<br>29.1 C 函数 339<br>29.2 延续（Continuation） 342<br>29.3 C 模块 345<br>29.4 练习 347<br>30 编写 C 函数的技巧 349<br>30.1 数组操作 349<br>30.2 字符串操作 351<br>30.3 在 C 函数中保存状态 355<br>30.3.1 注册表 355<br>30.3.2 上值 358<br>30.3.3 共享的上值（Shared upvalue） 361<br>30.4 练习 362<br>31 C 语言中的用户自定义类型 363<br>31.1 用户数据（Userdata） 364<br>31.2 元表（Metatable） 367<br>31.3 面向对象访问 370<br>31.4 数组访问 372<br>31.5 轻量级用户数据 373<br>31.6 练习 375<br>32 管理资源 376<br>32.1 目录迭代器 376<br>32.2 XML 解析器 380<br>32.3 练习 390<br>33 线程和状态 392<br>33.1 多线程 392<br>33.2 Lua 状态 397<br>33.3 练习 406</p><h3 id="Lua程序设计-PDF-下载地址"><a href="#Lua程序设计-PDF-下载地址" class="headerlink" title="Lua程序设计 PDF 下载地址:"></a>Lua程序设计 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1WVK_bzRULxVu6vaMQB0Ilw?pwd=kswq">https://pan.baidu.com/s/1WVK_bzRULxVu6vaMQB0Ilw?pwd=kswq</a> </p><p>提取码: kswq </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Lua语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Kafka权威指南》</title>
+      <link href="/2023/05/24/Kafka%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/"/>
+      <url>/2023/05/24/Kafka%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/1cf24ea01ffd8c6e8d27b099935eedd4.png" alt="《Kafka权威指南》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>每个应用程序都会产生数据，包括日志消息、度量指标、用户活动记录、响应消息等。如何移动数据，几乎变得与数据本身一样重要。如果你是架构师、开发者或者产品工程师，同时也是Apache Kafka新手，那么这本实践指南将会帮助你成为流式平台上处理实时数据的专家。 本书由出身于LinkedIn的Kafka核心作者和一线技术人员共同执笔，详细介绍了如何部署Kafka集群、开发可靠的基于事件驱动的微服务，以及基于Kafka平台构建可伸缩的流式应用程序。通过详尽示例，你将会了解到Kafka的设计原则、可靠性保证、关键API，以及复制协议、控制器和存储层等架构细节。 ● 了解发布和订阅消息模型以及该模型如何被应用在大数据生态系统中 ● 学习使用Kafka生产者和消费者来生成消息和读取消息 ● 了解Kafka保证可靠性数据传递的模式和场景需求 ● 使用Kafka构建数据管道和应用程序的最佳实践 ● 在生产环境中管理Kafka，包括监控、调优和维护 ● 了解Kafka的关键度量指标 ● 探索Kafka如何成为流式处理利器</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>Neha Narkhede， Confluent联合创始人、CTO，曾在LinkedIn主导基于Kafka和Apache Samza构建流式基础设施，是Kafka作者之一。 Gwen Shapira， Confluent系统架构师，帮助客户构建基于Kafka的系统，在可伸缩数据架构方面拥有十余年经验；曾任Cloudera公司解决方案架构师。另著有《Hadoop应用架构》。 Todd Palino， LinkedIn主任级SRE，负责部署管理大型的Kafka、Zookeeper和Samza集群。 【译者简介】 薛命灯，毕业于厦门大学软件学院，十余年软件开发和架构经验，InfoQ高级社区编辑。译有《硅谷革命》《生产微服务》等书。微信公众号CodeDeep。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>序xiii<br>前言xv<br>第1章　初识Kafka1<br>1.1　发布与订阅消息系统1<br>1.1.1　如何开始2<br>1.1.2　独立的队列系统3<br>1.2　Kafka登场4<br>1.2.1　消息和批次4<br>1.2.2　模式4<br>1.2.3　主题和分区5<br>1.2.4　生产者和消费者5<br>1.2.5　broker和集群6<br>1.2.6　多集群7<br>1.3　为什么选择Kafka8<br>1.3.1　多个生产者8<br>1.3.2　多个消费者8<br>1.3.3　基于磁盘的数据存储9<br>1.3.4　伸缩性9<br>1.3.5　高性能9<br>1.4　数据生态系统9<br>1.5　起源故事11<br>1.5.1　LinkedIn的问题11<br>1.5.2　Kafka的诞生12<br>1.5.3　走向开源12<br>1.5.4　命名13<br>1.6　开始Kafka之旅13<br>第2章　安装Kafka14<br>2.1　要事先行14<br>2.1.1　选择操作系统14<br>2.1.2　安装Java14<br>2.1.3　安装Zookeeper15<br>2.2　安装KafkaBroker17<br>2.3　broker配置18<br>2.3.1　常规配置18<br>2.3.2　主题的默认配置19<br>2.4　硬件的选择23<br>2.4.1　磁盘吞吐量23<br>2.4.2　磁盘容量23<br>2.4.3　内存23<br>2.4.4　网络24<br>2.4.5　CPU24<br>2.5　云端的Kafka24<br>2.6　Kafka集群24<br>2.6.1　需要多少个broker25<br>2.6.2　broker配置25<br>2.6.3　操作系统调优26<br>2.7　生产环境的注意事项28<br>2.7.1　垃圾回收器选项28<br>2.7.2　数据中心布局29<br>2.7.3　共享Zookeeper29<br>2.8　总结30<br>第3章　Kafka生产者——向Kafka写入数据31<br>3.1　生产者概览32<br>3.2　创建Kafka生产者33<br>3.3　发送消息到Kafka34<br>3.3.1　同步发送消息35<br>3.3.2　异步发送消息35<br>3.4　生产者的配置36<br>3.5　序列化器39<br>3.5.1　自定义序列化器39<br>3.5.2　使用Avro序列化41<br>3.5.3　在Kafka里使用Avro42<br>3.6　分区45<br>3.7　旧版的生产者API46<br>3.8　总结47<br>第4章　Kafka消费者——从Kafka读取数据48<br>4.1　KafkaConsumer概念48<br>4.1.1　消费者和消费者群组48<br>4.1.2　消费者群组和分区再均衡51<br>4.2　创建Kafka消费者52<br>4.3　订阅主题53<br>4.4　轮询53<br>4.5　消费者的配置55<br>4.6　提交和偏移量57<br>4.6.1　自动提交58<br>4.6.2　提交当前偏移量59<br>4.6.3　异步提交59<br>4.6.4　同步和异步组合提交61<br>4.6.5　提交特定的偏移量61<br>4.7　再均衡监听器62<br>4.8　从特定偏移量处开始处理记录64<br>4.9　如何退出66<br>4.10　反序列化器67<br>4.11　独立消费者——为什么以及怎样使用没有群组的消费者71<br>4.12　旧版的消费者API71<br>4.13　总结72<br>第5章　深入Kafka73<br>5.1　集群成员关系73<br>5.2　控制器74<br>5.3　复制74<br>5.4　处理请求76<br>5.4.1　生产请求78<br>5.4.2　获取请求78<br>5.4.3　其他请求80<br>5.5　物理存储81<br>5.5.1　分区分配81<br>5.5.2　文件管理82<br>5.5.3　文件格式83<br>5.5.4　索引84<br>5.5.5　清理84<br>5.5.6　清理的工作原理84<br>5.5.7　被删除的事件86<br>5.5.8　何时会清理主题86<br>5.9　总结86<br>第6章　可靠的数据传递87<br>6.1　可靠性保证87<br>6.2　复制88<br>6.3　broker配置89<br>6.3.1　复制系数89<br>6.3.2　不完全的首领选举90<br>6.3.3　最少同步副本91<br>6.4　在可靠的系统里使用生产者92<br>6.4.1　发送确认92<br>6.4.2　配置生产者的重试参数93<br>6.4.3　额外的错误处理94<br>6.5　在可靠的系统里使用消费者94<br>6.5.1　消费者的可靠性配置95<br>6.5.2　显式提交偏移量95<br>6.6　验证系统可靠性97<br>6.6.1　配置验证98<br>6.6.2　应用程序验证98<br>6.6.3　在生产环境监控可靠性99<br>6.7　总结100<br>第7章　构建数据管道101<br>7.1　构建数据管道时需要考虑的问题102<br>7.1.1　及时性102<br>7.1.2　可靠性102<br>7.1.3　高吞吐量和动态吞吐量103<br>7.1.4　数据格式103<br>7.1.5　转换104<br>7.1.6　安全性104<br>7.1.7　故障处理能力104<br>7.1.8　耦合性和灵活性105<br>7.2　如何在ConnectAPI和客户端API之间作出选择105<br>7.3　KafkaConnect106<br>7.3.1　运行Connect106<br>7.3.2　连接器示例——文件数据源和文件数据池107<br>7.3.3　连接器示例——从MySQL到ElasticSearch109<br>7.3.4　深入理解Connect114<br>7.4　Connect之外的选择116<br>7.4.1　用于其他数据存储的摄入框架116<br>7.4.2　基于图形界面的ETL工具117<br>7.4.3　流式处理框架117<br>7.5　总结117<br>第8章　跨集群数据镜像118<br>8.1　跨集群镜像的使用场景118<br>8.2　多集群架构119<br>8.2.1　跨数据中心通信的一些现实情况119<br>8.2.2　Hub和Spoke架构120<br>8.2.3　双活架构121<br>8.2.4　主备架构123<br>8.2.5　延展集群127<br>8.3　Kafka的MirrorMaker128<br>8.3.1　如何配置129<br>8.3.2　在生产环境部署MirrorMaker130<br>8.3.3　MirrorMaker调优132<br>8.4　其他跨集群镜像方案134<br>8.4.1　优步的uReplicator134<br>8.4.2　Confluent的Replicator135<br>8.5　总结135<br>第9章　管理Kafka136<br>9.1　主题操作136<br>9.1.1　创建主题137<br>9.1.2　增加分区138<br>9.1.3　删除主题138<br>9.1.4　列出集群里的所有主题139<br>9.1.5　列出主题详细信息139<br>9.2　消费者群组140<br>9.2.1　列出并描述群组140<br>9.2.2　删除群组142<br>9.2.3　偏移量管理142<br>9.3　动态配置变更143<br>9.3.1　覆盖主题的默认配置143<br>9.3.2　覆盖客户端的默认配置145<br>9.3.3　列出被覆盖的配置145<br>9.3.4　移除被覆盖的配置146<br>9.4　分区管理146<br>9.4.1　首选的首领选举146<br>9.4.2　修改分区副本147<br>9.4.3　修改复制系数150<br>9.4.4　转储日志片段151<br>9.4.5　副本验证152<br>9.5　消费和生产153<br>9.5.1　控制台消费者153<br>9.5.2　控制台生产者155<br>9.6　客户端ACL157<br>9.7　不安全的操作157<br>9.7.1　移动集群控制器157<br>9.7.2　取消分区重分配157<br>9.7.3　移除待删除的主题158<br>9.7.4　手动删除主题158<br>9.8　总结159<br>第10章　监控Kafka160<br>10.1　度量指标基础160<br>10.1.1　度量指标在哪里160<br>10.1.2　内部或外部度量161<br>10.1.3　应用程序健康检测161<br>10.1.4　度量指标的覆盖面161<br>10.2　broker的度量指标162<br>10.2.1　非同步分区162<br>10.2.2　broker度量指标166<br>10.2.3　主题和分区的度量指标173<br>10.2.4　Java虚拟机监控174<br>10.2.5　操作系统监控175<br>10.2.6　日志176<br>10.3　客户端监控177<br>10.3.1　生产者度量指标177<br>10.3.2　消费者度量指标179<br>10.3.3　配额181<br>10.4　延时监控182<br>10.5　端到端监控183<br>10.6　总结183<br>第11章　流式处理184<br>11.1　什么是流式处理185<br>11.2　流式处理的一些概念186<br>11.2.1　时间187<br>11.2.2　状态188<br>11.2.3　流和表的二元性188<br>11.2.4　时间窗口189<br>11.3　流式处理的设计模式190<br>11.3.1　单个事件处理191<br>11.3.2　使用本地状态191<br>11.3.3　多阶段处理和重分区193<br>11.3.4　使用外部查找——流和表的连接193<br>11.3.5　流与流的连接195<br>11.3.6　乱序的事件195<br>11.3.7　重新处理196<br>11.4　Streams示例197<br>11.4.1　字数统计197<br>11.4.2　股票市场统计199<br>11.4.3　填充点击事件流201<br>11.5　KafkaStreams的架构概览202<br>11.5.1　构建拓扑202<br>11.5.2　对拓扑进行伸缩203<br>11.5.3　从故障中存活下来205<br>11.6　流式处理使用场景205<br>11.7　如何选择流式处理框架206<br>11.8　总结208<br>附录A　在其他操作系统上安装Kafka209<br>作者介绍214<br>封面介绍214</p><h3 id="Kafka权威指南-PDF-下载地址"><a href="#Kafka权威指南-PDF-下载地址" class="headerlink" title="Kafka权威指南 PDF 下载地址:"></a>Kafka权威指南 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1WOLin-OR5DIGwQ97lp4vgw?pwd=s4it">https://pan.baidu.com/s/1WOLin-OR5DIGwQ97lp4vgw?pwd=s4it</a> </p><p>提取码: s4it </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Kafka </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《每天5分钟玩转Docker容器技术》</title>
+      <link href="/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+      <url>/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png" alt="《每天5分钟玩转Docker容器技术》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>Docker和容器技术是当下热门的IT技术，无论是互联网还是传统企业都在研究和实践如何用容器构建自己的 IT 基础设施。学习本书能够让读者少走弯路，系统地学习、掌握和实践 Docker 和容器技术。 本书共分为三部分。靠前部分介绍容器技术生态环境。第二部分是容器核心知识，包括架构、镜像、容器、网络和存储。第三部分是容器进阶知识，包括多主机管理、跨主机网络方案、监控、日志管理和数据管理。读者在学习的过程中，可以跟着教程进行操作，在实践中掌握 Docker 容器技术的核心技能。在之后的工作中，可以将本教程作为参考书，按需查找相关知识点。 本书主要面向微服务软件开发人员，以及 IT 实施和运维工程师等相关人员，也适合高等院校和培训学校相关专业的师生教学参考。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>CloudMan，十多年 IT 从业经验，就职于国际知名 IT 企业，从事 IT 基础设施实施服务，项目涉及服务器、存储、网络、虚拟化、云技术等各个方面。CloudMan 对新技术长期保持浓厚的兴趣和学习热情，十几年来一直专注 IT 技术领域的钻研与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1篇启程<br>第1章鸟瞰容器生态系统3<br>1.1容器生态系统3<br>1.2本教程覆盖的知识范围10<br>1.3准备实验环境10<br>1.3.1环境选择10<br>1.3.2安装Docker10<br>1.4运行第1个容器11<br>1.5小结12<br>第二篇容器技术<br>第2章容器核心知识概述15<br>2.1What——什么是容器15<br>2.2Why——为什么需要容器16<br>2.2.1容器解决的问题16<br>2.2.2Docker的特性20<br>2.2.3容器的优势20<br>2.3How——容器是如何工作的21<br>2.4小结24<br>第3章Docker镜像26<br>3.1镜像的内部结构26<br>3.1.1hello-world——最小的镜像26<br>3.1.2base镜像27<br>3.1.3镜像的分层结构30<br>3.2构建镜像32<br>3.2.1dockercommit32<br>3.2.2Dockerfile34<br>3.3RUNvsCMDvsENTRYPOINT42<br>3.3.1Shell和Exec格式42<br>3.3.2RUN44<br>3.3.3CMD44<br>3.3.4ENTRYPOINT45<br>3.3.5最佳实践46<br>3.4分发镜像46<br>3.4.1为镜像命名46<br>3.4.2使用公共Registry49<br>3.4.3搭建本地Registry51<br>3.5小结52<br>第4章Docker容器55<br>4.1运行容器55<br>4.1.1让容器长期运行56<br>4.1.2两种进入容器的方法57<br>4.1.3运行容器的最佳实践59<br>4.1.4容器运行小结59<br>4.2stop&#x2F;start&#x2F;restart容器60<br>4.3pause&#x2F;unpause容器61<br>4.4删除容器61<br>4.5StateMachine62<br>4.6资源限制65<br>4.6.1内存限额65<br>4.6.2CPU限额66<br>4.6.3BlockIO带宽限额68<br>4.7实现容器的底层技术69<br>4.7.1cgroup70<br>4.7.2namespace70<br>4.8小结72<br>第5章Docker网络74<br>5.1none网络74<br>5.2host网络75<br>5.3bridge网络76<br>5.4user-defined网络78<br>5.5容器间通信84<br>5.5.1IP通信84<br>5.5.2DockerDNSServer85<br>5.5.3joined容器85<br>5.6将容器与外部世界连接87<br>5.6.1容器访问外部世界87<br>5.6.2外部世界访问容器90<br>5.7小结91<br>第6章Docker存储92<br>6.1storagedriver92<br>6.2DataVolume94<br>6.2.1bindmount94<br>6.2.2dockermanagedvolume96<br>6.3数据共享99<br>6.3.1容器与host共享数据99<br>6.3.2容器之间共享数据99<br>6.4volumecontainer100<br>6.5data-packedvolumecontainer102<br>6.6DataVolume生命周期管理103<br>6.6.1备份104<br>6.6.2恢复104<br>6.6.3迁移104<br>6.6.4销毁104<br>6.7小结105<br>第三篇容器进阶知识<br>第7章多主机管理109<br>7.1实验环境描述110<br>7.2安装DockerMachine111<br>7.3创建Machine112<br>7.4管理Machine114<br>第8章容器网络117<br>8.1libnetwork&amp;CNM117<br>8.2overlay119<br>8.2.1实验环境描述120<br>8.2.2创建overlay网络121<br>8.2.3在overlay中运行容器122<br>8.2.4overlay网络连通性124<br>8.2.5overlay网络隔离126<br>8.2.6overlayIPAM127<br>8.3macvlan127<br>8.3.1准备实验环境127<br>8.3.2创建macvlan网络128<br>8.3.3macvlan网络结构分析130<br>8.3.4用sub-interface实现多macvlan网络131<br>8.3.5macvlan网络间的隔离和连通132<br>8.4flannel136<br>8.4.1实验环境描述137<br>8.4.2安装配置etcd137<br>8.4.3buildflannel138<br>8.4.4将flannel网络的配置信息保存到etcd139<br>8.4.5启动flannel139<br>8.4.6配置Docker连接flannel141<br>8.4.7将容器连接到flannel网络143<br>8.4.8flannel网络连通性144<br>8.4.9flannel网络隔离146<br>8.4.10flannel与外网连通性146<br>8.4.11host-gwbackend146<br>8.5weave148<br>8.5.1实验环境描述148<br>8.5.2安装部署weave149<br>8.5.3在host1中启动weave149<br>8.5.4在host1中启动容器150<br>8.5.5在host2中启动weave并运行容器153<br>8.5.6weave网络连通性154<br>8.5.7weave网络隔离155<br>8.5.8weave与外网的连通性156<br>8.5.9IPAM158<br>8.6calico158<br>8.6.1实验环境描述159<br>8.6.2启动etcd159<br>8.6.3部署calico160<br>8.6.4创建calico网络161<br>8.6.5在calico中运行容器161<br>8.6.6calico默认连通性164<br>8.6.7calicopolicy167<br>8.6.8calicoIPAM169<br>8.7比较各种网络方案170<br>8.7.1网络模型171<br>8.7.2DistributedStore171<br>8.7.3IPAM171<br>8.7.4连通与隔离172<br>8.7.5性能172<br>第9章容器监控173<br>9.1Docker自带的监控子命令173<br>9.1.1ps173<br>9.1.2…74<br>9.1.3stats175<br>9.2sysdig175<br>9.3WeaveScope179<br>9.3.1安装179<br>9.3.2容器监控181<br>9.3.3监控host184<br>9.3.4多主机监控186<br>9.4cAdvisor189<br>9.4.1监控DockerHost189<br>9.4.2监控容器191<br>9.5Prometheus194<br>9.5.1架构194<br>9.5.2多维数据模型195<br>9.5.3实践196<br>9.6比较不同的监控工具204<br>9.7几点建议205<br>第10章日志管理207<br>10.1Dockerlogs207<br>10.2Dockerloggingdriver209<br>10.3ELK211<br>10.3.1日志处理流程211<br>10.3.2安装ELK套件212<br>10.3.3Filebeat214<br>10.3.4管理日志216<br>10.4Fluentd220<br>10.4.1安装Fluentd221<br>10.4.2重新配置Filebeat221<br>10.4.3监控容器日志221<br>10.5Graylog222<br>10.5.1Graylog架构222<br>10.5.2部署Graylog223<br>10.5.3配置Graylog225<br>10.5.4监控容器日志227<br>10.6小结229<br>第11章数据管理230<br>11.1从一个例子开始230<br>11.2实践Rex-Raydriver232<br>11.2.1安装Rex-Ray232<br>11.2.2配置VirtualBox234<br>11.2.3创建Rex-Rayvolume236<br>11.2.4使用Rex-Rayvolume237<br>写在最后243</p><h3 id="每天5分钟玩转Docker容器技术-PDF-下载地址"><a href="#每天5分钟玩转Docker容器技术-PDF-下载地址" class="headerlink" title="每天5分钟玩转Docker容器技术 PDF 下载地址:"></a>每天5分钟玩转Docker容器技术 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1zVlzPaa3x6KA5q8yLpLQjQ?pwd=93k4">https://pan.baidu.com/s/1zVlzPaa3x6KA5q8yLpLQjQ?pwd=93k4</a> </p><p>提取码: 93k4 </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《深入理解Nginx（第2版）》</title>
+      <link href="/2023/05/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/"/>
+      <url>/2023/05/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/586618a77d10293862d1149eba4e03c3.png" alt="《深入理解Nginx（第2版）》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书致力于说明开发Nginx模块的必备知识，第1版发行以后，深受广大读者的喜爱．然而由于Ng,nx功能繁多且性能强大，以致必须了解的基本技能也很庞杂，而第1版成书匆忙，缺失了几个进阶的技巧描述，因此第2版在此基础上进行了完善。</p><p>书中首先通过介绍官方Nginx的基本用法和配置规则，帮助读者了解一般Nginx模块的用法，然后重点介绍了女口何开发HTTP模块(含HTTP过滤模块)来得到定制化的Nginx，其中包括开发—个功能复杂的模块所需要了解的各种知识，并对内存池的实现细节及TCP协议进行了详细介绍；接着，综合Nginx框架代码分析了Nginx架构的设计理念和技巧，此外，还新增了如何在模块中支持HTTP变量，以及与slab共享内存等相关的内容，相信通过完善，可进一步帮助读者更好地开发出功能丰富、性能—流的Nginx模块。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>陶辉，毕业于西安交通大学计算机科学与技术专业，曾就职于华为中央软件部、腾讯QQ空间、思科中国CRDC等公司，目前在阿里巴巴云计算公司的飞天团队工作，研究方向为介于Iaas和Paas间的弹性计算，多年以来专注于Nginx的定制化应用，对Nginx的设计与特性有深刻认识，实战经验丰富，编写过许多优秀的Nginx模块并应用于企业级产品中，同时撰写了大量关于Nginx的技术文章。擅长Linux下高性能服务器的开发，以及分布式环境下海量数据存储的设计开发。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第一部分　Nginx能帮我们做什么<br>第1章　研究Nginx前的准备工作2<br>1.1　Nginx是什么2<br>1.2　为什么选择Nginx5<br>1.3　准备工作7<br>1.3.1　Linux操作系统7<br>1.3.2　使用Nginx的必备软件7<br>1.3.3　磁盘目录8<br>1.3.4　Linux内核参数的优化9<br>1.3.5　获取Nginx源码10<br>1.4　编译安装Nginx11<br>1.5　configure详解11<br>1.5.1　configure的命令参数11<br>1.5.2　configure执行流程18<br>1.5.3　configure生成的文件21<br>1.6　Nginx的命令行控制23<br>1.7　小结27<br>第2章　Nginx的配置28<br>2.1　运行中的Nginx进程间的关系28<br>2.2　Nginx配置的通用语法31<br>2.2.1　块配置项31<br>2.2.2　配置项的语法格式32<br>2.2.3　配置项的注释33<br>2.2.4　配置项的单位33<br>2.2.5　在配置中使用变量33<br>2.3　Nginx服务的基本配置34<br>2.3.1　用于调试进程和定位问题的配置项34<br>2.3.2　正常运行的配置项36<br>2.3.3　优化性能的配置项37<br>2.3.4　事件类配置项39<br>2.4　用HTTP核心模块配置一个静态Web服务器40<br>2.4.1　虚拟主机与请求的分发41<br>2.4.2　文件路径的定义45<br>2.4.3　内存及磁盘资源的分配47<br>2.4.4　网络连接的设置49<br>2.4.5　MIME类型的设置52<br>2.4.6　对客户端请求的限制53<br>2.4.7　文件操作的优化54<br>2.4.8　对客户端请求的特殊处理56<br>2.4.9　ngx_http_core_module模块提供的变量57<br>2.5　用HTTPproxymodule配置一个反向代理服务器59<br>2.5.1　负载均衡的基本配置61<br>2.5.2　反向代理的基本配置63<br>2.6　小结66<br>第二部分　如何编写HTTP模块<br>第3章　开发一个简单的HTTP模块68<br>3.1　如何调用HTTP模块68<br>3.2　准备工作70<br>3.2.1　整型的封装71<br>3.2.2　ngx_str_t数据结构71<br>3.2.3　ngx_list_t数据结构71<br>3.2.4　ngx_table_elt_t数据结构75<br>3.2.5　ngx_buf_t数据结构75<br>3.2.6　ngx_chain_t数据结构77<br>3.3　如何将自己的HTTP模块编译进Nginx77<br>3.3.1　config文件的写法77<br>3.3.2　利用configure脚本将定制的模块加入到Nginx中78<br>3.3.3　直接修改Makefile文件81<br>3.4　HTTP模块的数据结构82<br>3.5　定义自己的HTTP模块86<br>3.6　处理用户请求89<br>3.6.1　处理方法的返回值89<br>3.6.2　获取URI和参数92<br>3.6.3　获取HTTP头部94<br>3.6.4　获取HTTP包体97<br>3.7　发送响应99<br>3.7.1　发送HTTP头部99<br>3.7.2　将内存中的字符串作为包体发送101<br>3.7.3　经典的“HelloWorld”示例102<br>3.8　将磁盘文件作为包体发送103<br>3.8.1　如何发送磁盘中的文件104<br>3.8.2　清理文件句柄106<br>3.8.3　支持用户多线程下载和断点续传107<br>3.9　用C++语言编写HTTP模块108<br>3.9.1　编译方式的修改108<br>3.9.2　程序中的符号转换109<br>3.10　小结110<br>第4章　配置、error日志和请求上下文111<br>4.1　http配置项的使用场景111<br>4.2　怎样使用http配置113<br>4.2.1　分配用于保存配置参数的数据结构113<br>4.2.2　设定配置项的解析方式115<br>4.2.3　使用14种预设方法解析配置项121<br>4.2.4　自定义配置项处理方法131<br>4.2.5　合并配置项133<br>4.3　HTTP配置模型135<br>4.3.1　解析HTTP配置的流程136<br>4.3.2　HTTP配置模型的内存布局139<br>4.3.3　如何合并配置项142<br>4.3.4　预设配置项处理方法的工作原理144<br>4.4　error日志的用法145<br>4.5　请求的上下文149<br>4.5.1　上下文与全异步Web服务器的关系149<br>4.5.2　如何使用HTTP上下文151<br>4.5.3　HTTP框架如何维护上下文结构152<br>4.6　小结153<br>第5章　访问第三方服务154<br>5.1　upstream的使用方式155<br>5.1.1　ngx_http_upstream_t结构体158<br>5.1.2　设置upstream的限制性参数159<br>5.1.3　设置需要访问的第三方服务器地址160<br>5.1.4　设置回调方法161<br>5.1.5　如何启动upstream机制161<br>5.2　回调方法的执行场景162<br>5.2.1　create_request回调方法162<br>5.2.2　reinit_request回调方法164<br>5.2.3　finalize_request回调方法165<br>5.2.4　process_header回调方法165<br>5.2.5　rewrite_redirect回调方法167<br>5.2.6　input_filter_init与input_filter回调方法167<br>5.3　使用upstream的示例168<br>5.3.1　upstream的各种配置参数168<br>5.3.2　请求上下文170<br>5.3.3　在create_request方法中构造请求170<br>5.3.4　在process_header方法中解析包头171<br>5.3.5　在finalize_request方法中释放资源175<br>5.3.6　在ngx_http_mytest_handler方法中启动upstream175<br>5.4　subrequest的使用方式177<br>5.4.1　配置子请求的处理方式177<br>5.4.2　实现子请求处理完毕时的回调方法178<br>5.4.3　处理父请求被重新激活后的回调方法179<br>5.4.4　启动subrequest子请求179<br>5.5　subrequest执行过程中的主要场景180<br>5.5.1　如何启动subrequest180<br>5.5.2　如何转发多个子请求的响应包体182<br>5.5.3　子请求如何激活父请求185<br>5.6　subrequest使用的例子187<br>5.6.1　配置文件中子请求的设置187<br>5.6.2　请求上下文188<br>5.6.3　子请求结束时的处理方法188<br>5.6.4　父请求的回调方法189<br>5.6.5　启动subrequest190<br>5.7　小结191<br>第6章　开发一个简单的HTTP过滤模块192<br>6.1　过滤模块的意义192<br>6.2　过滤模块的调用顺序193<br>6.2.1　过滤链表是如何构成的194<br>6.2.2　过滤链表的顺序196<br>6.2.3　官方默认HTTP过滤模块的功能简介197<br>6.3　HTTP过滤模块的开发步骤198<br>6.4　HTTP过滤模块的简单例子200<br>6.4.1　如何编写config文件201<br>6.4.2　配置项和上下文201<br>6.4.3　定义HTTP过滤模块203<br>6.4.4　初始化HTTP过滤模块204<br>6.4.5　处理请求中的HTTP头部204<br>6.4.6　处理请求中的HTTP包体206<br>6.5　小结206<br>第7章　Nginx提供的高级数据结构207<br>7.1　Nginx提供的高级数据结构概述207<br>7.2　ngx_queue_t双向链表209<br>7.2.1　为什么设计ngx_queue_t双向链表209<br>7.2.2　双向链表的使用方法209<br>7.2.3　使用双向链表排序的例子212<br>7.2.4　双向链表是如何实现的213<br>7.3　ngx_array_t动态数组215<br>7.3.1　为什么设计ngx_array_t动态数组215<br>7.3.2　动态数组的使用方法215<br>7.3.3　使用动态数组的例子217<br>7.3.4　动态数组的扩容方式218<br>7.4　ngx_list_t单向链表219<br>7.5　ngx_rbtree_t红黑树219<br>7.5.1　为什么设计ngx_rbtree_t红黑树219<br>7.5.2　红黑树的特性220<br>7.5.3　红黑树的使用方法222<br>7.5.4　使用红黑树的简单例子225<br>7.5.5　如何自定义添加成员方法226<br>7.6　ngx_radix_tree_t基数树228<br>7.6.1　ngx_radix_tree_t基数树的原理228<br>7.6.2　基数树的使用方法230<br>7.6.3　使用基数树的例子231<br>7.7　支持通配符的散列表232<br>7.7.1　ngx_hash_t基本散列表232<br>7.7.2　支持通配符的散列表235<br>7.7.3　带通配符散列表的使用例子241<br>7.8　小结245<br>第三部分　深入Nginx<br>第8章　Nginx基础架构248<br>8.1　Web服务器设计中的关键约束249<br>8.2　Nginx的架构设计251<br>8.2.1　优秀的模块化设计251<br>8.2.2　事件驱动架构254<br>8.2.3　请求的多阶段异步处理256<br>8.2.4　管理进程、多工作进程设计259<br>8.2.5　平台无关的代码实现259<br>8.2.6　内存池的设计259<br>8.2.7　使用统一管道过滤器模式的HTTP过滤模块260<br>8.2.8　其他一些用户模块260<br>8.3　Nginx框架中的核心结构体ngx_cycle_t260<br>8.3.1　ngx_listening_t结构体261<br>8.3.2　ngx_cycle_t结构体262<br>8.3.3　ngx_cycle_t支持的方法264<br>8.4　Nginx启动时框架的处理流程266<br>8.5　worker进程是如何工作的269<br>8.6　master进程是如何工作的271<br>8.7　ngx_pool_t内存池276<br>8.8　小结284<br>第9章　事件模块285<br>9.1　事件处理框架概述286<br>9.2　Nginx事件的定义288<br>9.3　Nginx连接的定义291<br>9.3.1　被动连接292<br>9.3.2　主动连接295<br>9.3.3　ngx_connection_t连接池296<br>9.4　ngx_events_module核心模块297<br>9.4.1　如何管理所有事件模块的配置项299<br>9.4.2　管理事件模块300<br>9.5　ngx_event_core_module事件模块302<br>9.6　epoll事件驱动模块308<br>9.6.1　epoll的原理和用法308<br>9.6.2　如何使用epoll310<br>9.6.3　ngx_epoll_module模块的实现312<br>9.7　定时器事件320<br>9.7.1　缓存时间的管理320<br>9.7.2　缓存时间的精度323<br>9.7.3　定时器的实现323<br>9.8　事件驱动框架的处理流程324<br>9.8.1　如何建立新连接325<br>9.8.2　如何解决“惊群”问题327<br>9.8.3　如何实现负载均衡329<br>9.8.4　post事件队列330<br>9.8.5　ngx_process_events_and_timers流程331<br>9.9　文件的异步I&#x2F;O334<br>9.9.1　Linux内核提供的文件异步I&#x2F;O335<br>9.9.2　ngx_epoll_module模块中实现的针对文件的异步I&#x2F;O337<br>9.10　TCP协议与Nginx342<br>9.11　小结347<br>第10章　HTTP框架的初始化348<br>10.1　HTTP框架概述349<br>10.2　管理HTTP模块的配置项352<br>10.2.1　管理main级别下的配置项353<br>10.2.2　管理server级别下的配置项355<br>10.2.3　管理location级别下的配置项358<br>10.2.4　不同级别配置项的合并364<br>10.3　监听端口的管理367<br>10.4　server的快速检索370<br>10.5　location的快速检索370<br>10.6　HTTP请求的11个处理阶段372<br>10.6.1　HTTP处理阶段的普适规则374<br>10.6.2　NGX_HTTP_POST_READ_PHASE阶段375<br>10.6.3　NGX_HTTP_SERVER_REWRITE_PHASE阶段378<br>10.6.4　NGX_HTTP_FIND_CONFIG_PHASE阶段378<br>10.6.5　NGX_HTTP_REWRITE_PHASE阶段378<br>10.6.6　NGX_HTTP_POST_REWRITE_PHASE阶段379<br>10.6.7　NGX_HTTP_PREACCESS_PHASE阶段379<br>10.6.8　NGX_HTTP_ACCESS_PHASE阶段379<br>10.6.9　NGX_HTTP_POST_ACCESS_PHASE阶段380<br>10.6.10　NGX_HTTP_TRY_FILES_PHASE阶段380<br>10.6.11　NGX_HTTP_CONTENT_PHASE阶段380<br>10.6.12　NGX_HTTP_LOG_PHASE阶段382<br>10.7　HTTP框架的初始化流程382<br>10.8　小结384<br>第11章　HTTP框架的执行流程385<br>11.1　HTTP框架执行流程概述386<br>11.2　新连接建立时的行为387<br>11.3　第一次可读事件的处理388<br>11.4　接收HTTP请求行394<br>11.5　接收HTTP头部398<br>11.6　处理HTTP请求400<br>11.6.1　ngx_http_core_generic_phase406<br>11.6.2　ngx_http_core_rewrite_phase408<br>11.6.3　ngx_http_core_access_phase409<br>11.6.4　ngx_http_core_content_phase412<br>11.7　subrequest与post请求415<br>11.8　处理HTTP包体417<br>11.8.1　接收包体419<br>11.8.2　放弃接收包体425<br>11.9　发送HTTP响应429<br>11.9.1　ngx_http_send_header430<br>11.9.2　ngx_http_output_filter432<br>11.9.3　ngx_http_writer435<br>11.10　结束HTTP请求437<br>11.10.1　ngx_http_close_connection438<br>11.10.2　ngx_http_free_request439<br>11.10.3　ngx_http_close_request440<br>11.10.4　ngx_http_finalize_connection441<br>11.10.5　ngx_http_terminate_request443<br>11.10.6　ngx_http_finalize_request443<br>11.11　小结446<br>第12章　upstream机制的设计与实现447<br>12.1　upstream机制概述448<br>12.1.1　设计目的448<br>12.1.2　ngx_http_upstream_t数据结构的意义450<br>12.1.3　ngx_http_upstream_conf_t配置结构体453<br>12.2　启动upstream455<br>12.3　与上游服务器建立连接457<br>12.4　发送请求到上游服务器460<br>12.5　接收上游服务器的响应头部463<br>12.5.1　应用层协议的两段划分方式463<br>12.5.2　处理包体的3种方式464<br>12.5.3　接收响应头部的流程465<br>12.6　不转发响应时的处理流程469<br>12.6.1　input_filter方法的设计469<br>12.6.2　默认的input_filter方法470<br>12.6.3　接收包体的流程472<br>12.7　以下游网速优先来转发响应473<br>12.7.1　转发响应的包头474<br>12.7.2　转发响应的包体477<br>12.8　以上游网速优先来转发响应481<br>12.8.1　ngx_event_pipe_t结构体的意义481<br>12.8.2　转发响应的包头485<br>12.8.3　转发响应的包体487<br>12.8.4　ngx_event_pipe_read_upstream方法489<br>12.8.5　ngx_event_pipe_write_to_downstream方法494<br>12.9　结束upstream请求496<br>12.10　小结499<br>第13章　邮件代理模块500<br>13.1　邮件代理服务器的功能500<br>13.2　邮件模块的处理框架503<br>13.2.1　一个请求的8个独立处理阶段503<br>13.2.2　邮件类模块的定义504<br>13.2.3　邮件框架的初始化506<br>13.3　初始化请求506<br>13.3.1　描述邮件请求的ngx_mail_session_t结构体506<br>13.3.2　初始化邮件请求的流程509<br>13.4　接收并解析客户端请求509<br>13.5　邮件认证510<br>13.5.1　ngx_mail_auth_http_ctx_t结构体510<br>13.5.2　与认证服务器建立连接511<br>13.5.3　发送请求到认证服务器513<br>13.5.4　接收并解析响应514<br>13.6　与上游邮件服务器间的认证交互514<br>13.6.1　ngx_mail_proxy_ctx_t结构体516<br>13.6.2　向上游邮件服务器发起连接516<br>13.6.3　与邮件服务器认证交互的过程518<br>13.7　透传上游邮件服务器与客户端间的流520<br>13.8　小结524<br>第14章　进程间的通信机制525<br>14.1　概述525<br>14.2　共享内存526<br>14.3　原子操作530<br>14.3.1　不支持原子库下的原子操作530<br>14.3.2　x86架构下的原子操作531<br>14.3.3　自旋锁533<br>14.4　Nginx频道535<br>14.5　信号538<br>14.6　信号量540<br>14.7　文件锁541<br>14.8　互斥锁544<br>14.8.1　文件锁实现的ngx_shmtx_t锁546<br>14.8.2　原子变量实现的ngx_shmtx_t锁548<br>14.9　小结553<br>第15章　变量554<br>15.1　使用内部变量开发模块555<br>15.1.1　定义模块556<br>15.1.2　定义http模块加载方式557<br>15.1.3　解析配置中的变量558<br>15.1.4　处理请求560<br>15.2　内部变量工作原理561<br>15.2.1　何时定义变量561<br>15.2.2　相关数据结构详述564<br>15.2.3　定义变量的方法572<br>15.2.4　使用变量的方法572<br>15.2.5　如何解析变量573<br>15.3　定义内部变量576<br>15.4　外部变量与脚本引擎577<br>15.4.1　相关数据结构578<br>15.4.2　编译“set”脚本581<br>15.4.3　脚本执行流程586<br>15.5　小结589<br>第16章　slab共享内存590<br>16.1　操作slab共享内存的方法590<br>16.2　使用slab共享内存池的例子592<br>16.2.1　共享内存中的数据结构593<br>16.2.2　操作共享内存中的红黑树与链表595<br>16.2.3　解析配置文件600<br>16.2.4　定义模块603<br>16.3　slab内存管理的实现原理605<br>16.3.1　内存结构布局607<br>16.3.2　分配内存流程613<br>16.3.3　释放内存流程617<br>16.3.4　如何使用位操作619<br>16.3.5　slab内存池间的管理624<br>16.4　小结624</p><h3 id="深入理解Nginx（第2版）-PDF-下载地址"><a href="#深入理解Nginx（第2版）-PDF-下载地址" class="headerlink" title="深入理解Nginx（第2版） PDF 下载地址:"></a>深入理解Nginx（第2版） PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1ZSmdV46PKhlyYEBc1FnLuA?pwd=idkf">https://pan.baidu.com/s/1ZSmdV46PKhlyYEBc1FnLuA?pwd=idkf</a> </p><p>提取码: idkf </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Go专家编程》</title>
+      <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
+      <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/f5a7e4251c9b195aa57acd6e4af9332c.png" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1lahji8e6Uu3wN-ncnQio9w?pwd=477g">https://pan.baidu.com/s/1lahji8e6Uu3wN-ncnQio9w?pwd=477g</a> </p><p>提取码: 477g </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Go语言编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Go并发编程实战（第2版）》</title>
+      <link href="/2023/05/24/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/"/>
+      <url>/2023/05/24/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/fe6fe0ca4452413f25f54d4132c79620.png" alt="《Go并发编程实战（第2版）》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书首先介绍了Go语言的优秀特性、安装设置方法、工程结构、标准命令和工具、语法基础、数据类型以及流程控制方法，接着阐述了与多进程编程和多线程编程有关的知识，然后重点介绍了goroutine、channel以及Go提供的传统同步方法，最后通过一个完整实例——网络爬虫框架进一步阐述Go语言的哲学和理念，同时分享作者在多年编程生涯中的一些见解和感悟。</p><p>与上一版相比，本书不仅基于Go 1.8对上一版进行了全面更新，而且更深入地描绘了Go运行时系统的内部机理，并且大幅改进了示例代码。</p><p>本书适用于有一定计算机编程基础的从业者以及对Go语言编程感兴趣的爱好者，非常适合作为Go语言编程进阶教程。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>郝林 从业12年有余的软件工匠，国内知名的Go语言技术布道者，Go语言北京用户组和GoHackers社群的发起人和组织者，多套免费在线Go语言教程的作者，深信Go语言在人工智能时代和机器人时代也能大放异彩的科技信徒。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　初识Go语言　　1<br>1.1　语言特性　　1<br>1.2　安装和设置　　2<br>1.3　工程结构　　3<br>1.3.1　工作区　　3<br>1.3.2　GOPATH　　4<br>1.3.3　源码文件　　5<br>1.3.4　代码包　　8<br>1.4　标准命令简述　　11<br>1.5　问候程序　　13<br>1.6　小结　　14<br>第2章　语法概览　　15<br>2.1　基本构成要素　　15<br>2.1.1　标识符　　15<br>2.1.2　关键字　　16<br>2.1.3　字面量　　17<br>2.1.4　操作符　　17<br>2.1.5　表达式　　19<br>2.2　基本类型　　20<br>2.3　高级类型　　22<br>2.3.1　数组　　23<br>2.3.2　切片　　23<br>2.3.3　字典　　24<br>2.3.4　函数和方法　　25<br>2.3.5　接口　　28<br>2.3.6　结构体　　29<br>2.4　流程控制　　30<br>2.4.1　代码块和作用域　　30<br>2.4.2　if语句　　32<br>2.4.3　switch语句　　32<br>2.4.4　for语句　　34<br>2.4.5　defer语句　　36<br>2.4.6　panic和recover　　38<br>2.5　聊天机器人　　40<br>2.6　小结　　44<br>第3章　并发编程综述　　45<br>3.1　并发编程基础　　45<br>3.1.1　串行程序与并发程序　　46<br>3.1.2　并发程序与并行程序　　46<br>3.1.3　并发程序与并发系统　　47<br>3.1.4　并发程序的不确定性　　47<br>3.1.5　并发程序内部的交互　　47<br>3.2　多进程编程　　48<br>3.2.1　进程　　48<br>3.2.2　关于同步　　55<br>3.2.3　管道　　60<br>3.2.4　信号　　65<br>3.2.5　socket　　74<br>3.3　多线程编程　　97<br>3.3.1　线程　　98<br>3.3.2　线程的同步　　107<br>3.4　多线程与多进程　　125<br>3.5　多核时代的并发编程　　126<br>3.6　小结　　130<br>第4章　Go的并发机制　　131<br>4.1　原理探究　　131<br>4.1.1　线程实现模型　　132<br>4.1.2　调度器　　142<br>4.1.3　更多细节　　158<br>4.2　goroutine　　160<br>4.2.1　go语句与goroutine　　160<br>4.2.2　主goroutine的运作　　166<br>4.2.3　runtime包与goroutine　　166<br>4.3　channel　　169<br>4.3.1　channel的基本概念　　169<br>4.3.2　单向channel　　180<br>4.3.3　for语句与channel　　184<br>4.3.4　select语句　　185<br>4.3.5　非缓冲的channel　　190<br>4.3.6　time包与channel　　192<br>4.4　实战演练：载荷发生器　　198<br>4.4.1　参数和结果　　199<br>4.4.2　基本结构　　201<br>4.4.3　初始化　　206<br>4.4.4　启动和停止　　212<br>4.4.5　调用器和功能测试　　221<br>4.5　小结　　231<br>第5章　同　　步　　232<br>5.1　锁的使用　　232<br>5.1.1　互斥锁　　232<br>5.1.2　读写锁　　236<br>5.1.3　锁的完整示例　　238<br>5.2　条件变量　　244<br>5.3　原子操作　　247<br>5.3.1　增或减　　247<br>5.3.2　比较并交换　　249<br>5.3.3　载入　　250<br>5.3.4　存储　　251<br>5.3.5　交换　　251<br>5.3.6　原子值　　252<br>5.3.7　应用于实际　　256<br>5.4　只会执行一次　　257<br>5.5　WaitGroup　　258<br>5.6　临时对象池　　262<br>5.7　实战演练——ConcurrentMap　　265<br>5.8　小结　　280<br>第6章　网络爬虫框架设计和实现　　281<br>6.1　网络爬虫与框架　　281<br>6.2　功能需求和分析　　283<br>6.3　总体设计　　284<br>6.4　详细设计　　286<br>6.4.1　基本数据结构　　286<br>6.4.2　接口的设计　　293<br>6.5　工具的实现　　309<br>6.5.1　缓冲器　　309<br>6.5.2　缓冲池　　311<br>6.5.3　多重读取器　　317<br>6.6　组件的实现　　318<br>6.6.1　内部基础接口　　319<br>6.6.2　组件注册器　　321<br>6.6.3　下载器　　323<br>6.6.4　分析器　　325<br>6.6.5　条目处理管道　　328<br>6.7　调度器的实现　　329<br>6.7.1　基本结构　　329<br>6.7.2　初始化　　331<br>6.7.3　启动　　333<br>6.7.4　停止　　343<br>6.7.5　其他方法　　344<br>6.7.6　总结　　345<br>6.8　一个简单的图片爬虫　　346<br>6.8.1　概述　　346<br>6.8.2　命令参数　　346<br>6.8.3　初始化调度器　　348<br>6.8.4　监控调度器　　354<br>6.8.5　启动调度器　　364<br>6.9　扩展与思路　　365<br>6.10　本章小结　　368<br>附录A　Go语言的学习资源　　369</p><h3 id="Go并发编程实战（第2版）-PDF-下载地址"><a href="#Go并发编程实战（第2版）-PDF-下载地址" class="headerlink" title="Go并发编程实战（第2版） PDF 下载地址:"></a>Go并发编程实战（第2版） PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1Co1dqYpvYMmyWhhSPnfS_Q?pwd=b8n3">https://pan.baidu.com/s/1Co1dqYpvYMmyWhhSPnfS_Q?pwd=b8n3</a> </p><p>提取码: b8n3 </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Go语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《DevOps实践指南》</title>
       <link href="/2023/05/23/DevOps%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/"/>
       <url>/2023/05/23/DevOps%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/</url>
@@ -268,33 +499,6 @@
     
     
     <entry>
-      <title>本站所有文档密码</title>
-      <link href="//mima/"/>
-      <url>//mima/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">  <script id="hbeData" type="hbeData" data-hmacdigest="5c082efc780d84af1dccd0e5d896a11a7c43283b7639b4e398c9a7c5db170634">1b693c4938223286468132b2f7068bf6dfee07f365da88e0f20fb98ce9ee8b53d2b2b3d27fe00611ae01aab9502c74251a028d46727701746eb6ab24f4a6bde0bb413a4181288cc184d1a5b56ea616815ed410e54d06738826d84350289d51b1ad1d1ebd149673c98971c830a8ae9ac7603436acc5bf3f434dc9906fa03a83506227b33188752de09daa22ca60b4055b83ae829311c73f56744cd35f0ea194ae6bc909e56cee47d858e3672029697b67eb8bcba1b115780e43d52157418dbe8becb4a1a3c96157e6c43a86158d32e0429345c61921f2f87f18a04ae06f43af3378a168bf91db0510d02da389d68dd5f101a6207756c5d6279d4fd906fc6132105daf5f11d4fb01f2d67cfcb899e63267fc22871def8788487d21b982ecab19a26792c3017fe7858a0a8f459c870d2e8a22ad9bbf1d82799f5fb336ec8d23f86fc3516d6f563c77dda4db48b4b460ea9cb51dc81c778e5f40fbba65f11aa3ddfd8f962974b0862a0bb54d3ac5fa6fa772cb7c7e1d49b3e1bd4e4d25811a00987a5da9f4508a11bda22aba5b6df28a8c791c883b988784d874439fcebd7f1cb675132af28e2d4f57f05368ed840b3dc5d8689e486b941c258473b243f823039f2655b9cb0f4616987f31078b783b605f758c1ad819c1b79090958518c78b0828722165a9324b6a9ab3a9c58f881841ef10dc51401d19ee7f4fce137b8ddbce23c25b4d4b8913677b5cc82b7688f7ebcb4756886a852cd45c9ab8f7fbebf24159a7a7293953f7aef2da7dfbbf06fb10b14caa7e55c61f5069ca3f103d6b818e5507bb29b2e9691bf7adec2031d3a05215fbb93cb85f7ad68b628627bd2d75a7f36d8df03e4640e273346659990c34302d8b206e557e54960086d8ef0e10cd355901d75349aed6385578c90c6599b213c056b57dd86e45dc9458b93d05816a65d9cbb2ff9cb0a85661bb72a92128c171c9a16bba54ecf8d70069498a9881509852858b6d13b028569969caf7a9de4558499417935a12f80e37cb698dd1d277849b13f5e7bd62418ab0136fcf205b54904275abd526dbe8feb7171638ced480d05ea6ad87281daf92e07255e25f104dd9143e50ced126f6901df83df5de101231beae8735e58ea2bc92f1152ce46df138df1c519926e9872b176a73f70546691f40d2637b09303811588e8e241c7287c761a7083b06b1b0ed57147e7f3e8b41b7759ccc776ec86611420786b45a7c16b353027d8cabe1d04ac4b8272c2183e1416ba7a4b89dc5190a97347292462001cb0f8f7037cc332602e8c4ff21c0290df0df9746c2c5f9f55118fefe8d4ec2dc75115a5a7eedc211238ace69025029bb4e0e4fa6816010cfd388f2d63a6793668415f1754c6f0b3af839b3cc280aca2c8e486f044275abdd4652c2425edea4b0b3f4de374665fb280fc3b4acc12962770debdf303496aa3f7226dcd6a851afe898c1bbf3ae60695250ddcecc97be7dce889383ec482297a2adc63d6bc26c2fc25c96b37958824718d0ab00eef419307deedad0c240437597c97f59a450706eb0541ab63068d2e266924f438fd026c52caea81cccef80ec7002a60b0f213b2257d1f15010bd6b9cd09b5b95b217fd1ffe0722926743a40724c856847c23a93e2f15c52c</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-flip">      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 此文章需要要密码才可以查看.">您好, 此文章需要要密码才可以查看.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
-      <categories>
-          
-          <category> PDF密码 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>《pytest测试实战》</title>
       <link href="/2023/05/19/pytest%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%98/"/>
       <url>/2023/05/19/pytest%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%88%98/</url>
@@ -320,6 +524,33 @@
             <tag> 编程 </tag>
             
             <tag> PyTest </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本站所有文档密码</title>
+      <link href="//mima/"/>
+      <url>//mima/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">  <script id="hbeData" type="hbeData" data-hmacdigest="5c082efc780d84af1dccd0e5d896a11a7c43283b7639b4e398c9a7c5db170634">1b693c4938223286468132b2f7068bf6dfee07f365da88e0f20fb98ce9ee8b53d2b2b3d27fe00611ae01aab9502c74251a028d46727701746eb6ab24f4a6bde0bb413a4181288cc184d1a5b56ea616815ed410e54d06738826d84350289d51b1ad1d1ebd149673c98971c830a8ae9ac7603436acc5bf3f434dc9906fa03a83506227b33188752de09daa22ca60b4055b83ae829311c73f56744cd35f0ea194ae6bc909e56cee47d858e3672029697b67eb8bcba1b115780e43d52157418dbe8becb4a1a3c96157e6c43a86158d32e0429345c61921f2f87f18a04ae06f43af3378a168bf91db0510d02da389d68dd5f101a6207756c5d6279d4fd906fc6132105daf5f11d4fb01f2d67cfcb899e63267fc22871def8788487d21b982ecab19a26792c3017fe7858a0a8f459c870d2e8a22ad9bbf1d82799f5fb336ec8d23f86fc3516d6f563c77dda4db48b4b460ea9cb51dc81c778e5f40fbba65f11aa3ddfd8f962974b0862a0bb54d3ac5fa6fa772cb7c7e1d49b3e1bd4e4d25811a00987a5da9f4508a11bda22aba5b6df28a8c791c883b988784d874439fcebd7f1cb675132af28e2d4f57f05368ed840b3dc5d8689e486b941c258473b243f823039f2655b9cb0f4616987f31078b783b605f758c1ad819c1b79090958518c78b0828722165a9324b6a9ab3a9c58f881841ef10dc51401d19ee7f4fce137b8ddbce23c25b4d4b8913677b5cc82b7688f7ebcb4756886a852cd45c9ab8f7fbebf24159a7a7293953f7aef2da7dfbbf06fb10b14caa7e55c61f5069ca3f103d6b818e5507bb29b2e9691bf7adec2031d3a05215fbb93cb85f7ad68b628627bd2d75a7f36d8df03e4640e273346659990c34302d8b206e557e54960086d8ef0e10cd355901d75349aed6385578c90c6599b213c056b57dd86e45dc9458b93d05816a65d9cbb2ff9cb0a85661bb72a92128c171c9a16bba54ecf8d70069498a9881509852858b6d13b028569969caf7a9de4558499417935a12f80e37cb698dd1d277849b13f5e7bd62418ab0136fcf205b54904275abd526dbe8feb7171638ced480d05ea6ad87281daf92e07255e25f104dd9143e50ced126f6901df83df5de101231beae8735e58ea2bc92f1152ce46df138df1c519926e9872b176a73f70546691f40d2637b09303811588e8e241c7287c761a7083b06b1b0ed57147e7f3e8b41b7759ccc776ec86611420786b45a7c16b353027d8cabe1d04ac4b8272c2183e1416ba7a4b89dc5190a97347292462001cb0f8f7037cc332602e8c4ff21c0290df0df9746c2c5f9f55118fefe8d4ec2dc75115a5a7eedc211238ace69025029bb4e0e4fa6816010cfd388f2d63a6793668415f1754c6f0b3af839b3cc280aca2c8e486f044275abdd4652c2425edea4b0b3f4de374665fb280fc3b4acc12962770debdf303496aa3f7226dcd6a851afe898c1bbf3ae60695250ddcecc97be7dce889383ec482297a2adc63d6bc26c2fc25c96b37958824718d0ab00eef419307deedad0c240437597c97f59a450706eb0541ab63068d2e266924f438fd026c52caea81cccef80ec7002a60b0f213b2257d1f15010bd6b9cd09b5b95b217fd1ffe0722926743a40724c856847c23a93e2f15c52c</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-flip">      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 此文章需要要密码才可以查看.">您好, 此文章需要要密码才可以查看.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> PDF密码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
             
         </tags>
       
