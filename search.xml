@@ -206,7 +206,7 @@
       <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
       <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/f5a7e4251c9b195aa57acd6e4af9332c.png" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1lahji8e6Uu3wN-ncnQio9w?pwd=477g">https://pan.baidu.com/s/1lahji8e6Uu3wN-ncnQio9w?pwd=477g</a> </p><p>提取码: 477g </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.png" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19">https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19</a> </p><p>提取码：mp19</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
       
       
       <categories>
@@ -224,9 +224,75 @@
             
             <tag> PDF下载 </tag>
             
+            <tag> 运维 </tag>
+            
             <tag> Go语言编程 </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Docker容器与容器云（第2版）》</title>
+      <link href="/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/"/>
+      <url>/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/39k8ibvr7xj60m8z1o8qxwl8gfprwc3f.png" alt="《Docker容器与容器云（第2版）》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书根据Docker 1.10版和Kubernetes 1.2版对第1版进行了全面更新，从实践者的角度出发，以Docker和Kubernetes为重点，沿着“基本用法介绍”到“核心原理解读”到“高级实践技巧”的思路，一本书讲透当前主流的容器和容器云技术，有助于读者在实际场景中利用Docker容器和容器云解决问题并启发新的思考。全书包括两部分，第一部分深入解读Docker容器技术，包括Docker架构与设计、核心源码解读和高级实践技巧；第二部分归纳和比较了三类基于Docker的主流容器云项目，包括专注Docker容器编排与部署的容器云、专注应用支撑的容器云以及一切皆容器的Kubernetes，进而详细解读了Kubernetes核心源码的设计与实现，最后介绍了几种典型场景下的Kubernetes最佳实践。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>浙江大学软件工程实验室（Software Engineering Lab，SEL）</p><p>云计算团队组建于2011年，组织博士和硕士研究生搭建、分析和钻研开源的云计算技术，包括Docker、Kubernetes、Cloud Foundry、OpenStack、CloudStack、Eucalyptus、Convirt、OpenShift等，积极为开源社区贡献代码，管理和参与线上线下讨论社区，参加国内外云计算技术峰会并发言。以开源社区为技术交流研发平台，浙江大学SEL实验室在几年的时间里成长为一个充满热情、富有能力的云计算研发团队，也在国内外开源云计算社区，尤其是在Docker、Kubernetes和Cloud Foundry社区得到了广泛认可。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第一部分　Docker深入解读<br>第1章　从容器到容器云　　2<br>1.1　云计算平台　　2<br>1.2　容器，新的革命　　3<br>1.3　进化：从容器到容器云　　7<br>第2章　Docker 基础　　8<br>2.1　Docker的安装　　8<br>2.2　Docker操作参数解读　　9<br>2.3　搭建你的第一个Docker应用栈　　16<br>2.3.1　Docker集群部署　　16<br>2.3.2　第一个Hello World　　17<br>2.3.3　开发、测试和发布一体化　　27<br>第3章　Docker核心原理解读　　28<br>3.1　Docker背后的内核知识　　28<br>3.1.1　namespace资源隔离　　28<br>3.1.2　cgroups资源限制　　45<br>3.2　Docker架构概览　　53<br>3.2.1　Docker daemon　　54<br>3.2.2　Docker client　　54<br>3.2.3　镜像管理　　54<br>3.2.4　execdriver、volumedriver、graphdriver　　55<br>3.2.5　network　　55<br>3.3　client和daemon　　56<br>3.3.1　client模式　　56<br>3.3.2　daemon模式　　58<br>3.3.3　从client到daemon　　64<br>3.4　libcontainer　　67<br>3.4.1　libcontainer的工作方式　　69<br>3.4.2　libcontainer实现原理　　70<br>3.4.3　使用runC与libcontainer进行交互　　75<br>3.5　Docker镜像管理　　77<br>3.5.1　什么是Docker镜像　　77<br>3.5.2　Docker镜像关键概念　　80<br>3.5.3　Docker镜像构建操作　　81<br>3.5.4　Docker镜像的分发方法　　84<br>3.6　Docker存储管理　　87<br>3.6.1　Docker镜像元数据管理　　87<br>3.6.2　Docker存储驱动　　89<br>3.7　Docker数据卷　　99<br>3.7.1　数据卷的使用方式　　100<br>3.7.2　数据卷原理解读　　105<br>3.8　Docker网络管理　　108<br>3.8.1　Docker网络基础　　108<br>3.8.2　Docker daemon网络配置原理　　116<br>3.8.3　libcontainer网络配置原理　　119<br>3.8.4　传统的link原理解析　　125<br>3.8.5　新的link介绍　　127<br>3.9　Docker与容器安全　　129<br>3.9.1　Docker的安全机制　　129<br>3.9.2　Docker安全问题　　135<br>3.9.3　Docker安全的解决方案　　139<br>第4章　Docker 高级实践技巧　　151<br>4.1　容器化思维　　151<br>4.1.1　SSH服务器的替代方案　　151<br>4.1.2　Docker内应用日志管理方案　　152<br>4.1.3　容器化思维及更多　　153<br>4.2　Docker高级网络实践　　153<br>4.2.1　玩转Linux networknamespace　　154<br>4.2.2　pipework原理解析　　159<br>4.2.3　pipework跨主机通信　　165<br>4.2.4　OVS划分VLAN　　170<br>4.2.5　OVS隧道模式　　174<br>4.3　Dockerfile最佳实践　　187<br>4.3.1　Dockerfile的使用　　187<br>4.3.2　Dockerfile实践心得　　191<br>4.4　Docker容器的监控手段　　193<br>4.4.1　Docker容器监控维度　　194<br>4.4.2　容器监控命令　　195<br>4.4.3　常用的容器监控工具　　197<br>4.5　容器化应用构建的基础：高可用配置中心　　201<br>4.5.1　etcd经典应用场景　　201<br>4.5.2　etcd实现原理　　206<br>第二部分　Docker云平台解读<br>第5章　构建自己的容器云　　222<br>5.1　再谈云平台的层次架构　　222<br>5.2　从小工到专家　　225<br>第6章　专注编排与部署：三剑客与Fleet　　230<br>6.1　编排小神器Fig&#x2F;Compose　　230<br>6.1.1　再谈容器编排与部署　　230<br>6.1.2　Compose原理：一探究竟　　233<br>6.2　跨平台宿主环境管理工具Machine　　237<br>6.2.1　Machine与虚拟机软件　　237<br>6.2.2　Machine与IaaS平台　　238<br>6.2.3　Machine小结　　239<br>6.3　集群抽象工具Swarm　　240<br>6.3.1　Swarm简介　　240<br>6.3.2　试用Swarm　　241<br>6.3.3　Swarm集群的多种创建方式　　243<br>6.3.4　Swarm对请求的处理　　245<br>6.3.5　Swarm集群的调度策略　　245<br>6.3.6　Swarm集群高可用（HA）　　246<br>6.3.7　Swarm与Machine　　247<br>6.3.8　Swarm小结　　248<br>6.4　编排之秀Fleet　　248<br>6.4.1　旧问题新角度：Docker distro　　249<br>6.4.2　Fleet的原理剖析　　252<br>第7章　专注应用支撑和运行时：Flynn和Deis　　258<br>7.1　Flynn，一个小而美的两层架构　　258<br>7.1.1　第0层：容器云的基础设施　　259<br>7.1.2　第1层：容器云的功能框架　　259<br>7.1.3　Flynn体系架构与实现原理　　260<br>7.2　谈谈Deis与Flynn　　270<br>7.2.1　应用发布上的比较　　271<br>7.2.2　关于Deis的一些思考　　273<br>第8章　一切皆容器：Kubernetes　　274<br>8.1　Kubernetes是个什么样的项目　　274<br>8.2　Kubernetes的设计解读　　275<br>8.2.1　一个典型案例：Guestbook　　275<br>8.2.2　pod设计解读　　277<br>8.2.3　replication controller设计解读　　288<br>8.2.4　service的设计解读　　294<br>8.2.5　新一代副本控制器replica set　　306<br>8.2.6　Deployment　　307<br>8.2.7　DaemonSet　　312<br>8.2.8　ConfigMap　　312<br>8.2.9　Job　　317<br>8.2.10　Horizontal Pod Autoscaler　　318<br>8.3　Kubernetes核心组件解读　　320<br>8.3.1　Kubernetes的整体架构　　320<br>8.3.2　APIServer　　321<br>8.3.3　scheduler　　328<br>8.3.4　controller manager　　338<br>8.3.5　kubelet　　346<br>8.3.6　kube-proxy　　352<br>8.3.7　核心组件协作流程　　362<br>8.4　Kubernetes存储核心原理　　366<br>8.4.1　volume设计解读　　366<br>8.4.2　volume实现原理分析　　367<br>8.4.3　volume使用案例　　368<br>8.4.4　persistent volume　　371<br>8.5　Kubernetes网络核心原理　　372<br>8.5.1　单pod单IP模型　　373<br>8.5.2　pod和网络容器　　374<br>8.5.3　实现Kubernetes的网络模型　　377<br>8.6　Kubernetes多租户管理与资源控制　　381<br>8.6.1　namespace设计解读　　381<br>8.6.2　Kubernetes用户认证机制　　385<br>8.6.3　Kubernetes用户授权机制　　387<br>8.6.4　Kubernetes多维资源管理机制admission control　　390<br>8.7　Kubernetes高级实践　　402<br>8.7.1　应用健康检查　　402<br>8.7.2　高可用性　　405<br>8.7.3　日志　　408<br>8.7.4　集成DNS　　410<br>8.7.5　容器上下文环境　　412<br>8.8　Kubernetes未来动向　　414<br>8.8.1　Ubernetes　　414<br>8.8.2　petSet　　415<br>8.8.3　performance　　417<br>8.8.4　rescheduler　　417<br>8.8.5　OCI标准　　419<br>8.9　不要停止思考　　419<br>第三部分　附录<br>附录A　Docker的安装　　424<br>附录B　阅读Docker源代码的神兵利器　　432<br>附录C　快速熟悉开源项目　　441<br>附录D　cgroups的测试与使用　　444<br>附录E　cgroups子系统配置参数介绍　　448<br>附录F　Kubernetes的安装　　453<br>后记　　457</p><h3 id="Docker容器与容器云（第2版）-PDF-下载地址"><a href="#Docker容器与容器云（第2版）-PDF-下载地址" class="headerlink" title="Docker容器与容器云（第2版） PDF 下载地址:"></a>Docker容器与容器云（第2版） PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1IglaoAGn0nRKN8tOE32WWQ?pwd=v15b">https://pan.baidu.com/s/1IglaoAGn0nRKN8tOE32WWQ?pwd=v15b</a> </p><p>提取码：v15b</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
             <tag> 运维 </tag>
+            
+            <tag> Go语言编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Go语言高级编程》</title>
+      <link href="/2023/05/24/Go%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/"/>
+      <url>/2023/05/24/Go%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/o6fkcz9f5pj28fedxj7l7biszkbb6cvf.png" alt="《Go语言高级编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书从实践出发讲解Go语言编程的进阶知识。本书共6章，第1章简单回顾Go语言的发展历史；第2章和第3章系统介绍CGO编程和Go汇编语言的用法；第4章对RPC和Protobuf技术进行深入介绍，并讲述如何打造一个自己的RPC系统；第5章介绍工业级环境的Web系统的设计和相关技术；第6章介绍Go语言在分布式领域的一些编程技术。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>柴树杉</p><p>国内第一批的Go语言爱好者，Go语言代码贡献者，CGO资深用户。同时对WebAssembly技术有一定研究，著有《WebAssembly标准入门》。Github账号为chai2010。</p><p>曹春晖</p><p>在Web领域工作多年，开源爱好者。对大型网站系统的架构和相关工具的实现很感兴趣，并且有一些研究成果。目前在滴滴平台技术部工作。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章 语言基础<br>1.1 Go语言创世纪<br>1.2 Hello, World 的革命<br>1.3 数组、字符串和切片<br>1.4 函数、方法和接口<br>1.5 面向并发的内存模型<br>1.6 常见的并发模式<br>1.7 错误和异常<br>1.8 补充说明<br>第2章 CGO编程<br>2.1 快速入门<br>2.2 CGO基础<br>2.3 类型转换<br>2.4 函数调用<br>2.5 内部机制<br>2.6 实战: 封装qsort<br>2.7 CGO内存模型<br>2.8 C++类包装<br>2.9 静态库和动态库<br>2.10 编译和链接参数<br>2.11 补充说明<br>第3章 汇编语言<br>3.1 快速入门<br>3.2 计算机结构<br>3.3 常量和全局变量<br>3.4 函数<br>3.5 控制流<br>3.6 再论函数<br>3.7 汇编语言的威力<br>3.8 例子：Goroutine ID<br>3.9 Delve调试器<br>3.10 补充说明<br>第4章 RPC和Protobuf<br>4.1 RPC入门<br>4.2 Protobuf<br>4.3 玩转RPC<br>4.4 gRPC入门<br>4.5 gRPC进阶<br>4.6 gRPC和Protobuf扩展<br>4.7 pbgo: 基于Protobuf的框架<br>4.8 grpcurl工具<br>4.9 补充说明<br>第5章 Go和Web<br>5.1 Web开发简介<br>5.2 请求路由<br>5.3 中间件<br>5.4 请求校验<br>5.5 和数据库打交道<br>5.6 服务流量限制<br>5.7 大型Web项目分层<br>5.8 接口和表驱动开发<br>5.9 灰度发布和A&#x2F;B测试<br>5.10 补充说明<br>第6章 分布式系统<br>6.1 分布式 id 生成器<br>6.2 分布式锁<br>6.3 延时任务系统<br>6.4 分布式搜索引擎<br>6.5 负载均衡<br>6.6 分布式配置管理<br>6.7 分布式爬虫<br>6.8 补充说明<br>附录<br>附录A: Go语言常见坑<br>附录B: 有趣的代码片段</p><h3 id="Go语言高级编程-PDF-下载地址"><a href="#Go语言高级编程-PDF-下载地址" class="headerlink" title="Go语言高级编程 PDF 下载地址:"></a>Go语言高级编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1Chsb8grxKKCd8CJNHG9lXg?pwd=1lli">https://pan.baidu.com/s/1Chsb8grxKKCd8CJNHG9lXg?pwd=1lli</a> </p><p>提取码：1lli</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Go语言编程 </tag>
             
         </tags>
       
@@ -290,9 +356,9 @@
             
             <tag> PDF下载 </tag>
             
-            <tag> 运维 </tag>
-            
             <tag> DevOps </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
