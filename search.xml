@@ -202,39 +202,6 @@
     
     
     <entry>
-      <title>《Go专家编程》</title>
-      <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
-      <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.png" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19">https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19</a> </p><p>提取码：mp19</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-          <category> 书籍推荐 </category>
-          
-          <category> 百度网盘PDF下载 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PDF下载 </tag>
-            
-            <tag> 运维 </tag>
-            
-            <tag> Go语言编程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>《Docker容器与容器云（第2版）》</title>
       <link href="/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/"/>
       <url>/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/</url>
@@ -259,7 +226,7 @@
             
             <tag> 运维 </tag>
             
-            <tag> Go语言编程 </tag>
+            <tag> Docker </tag>
             
         </tags>
       
@@ -293,6 +260,72 @@
             <tag> 运维 </tag>
             
             <tag> Go语言编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Go专家编程》</title>
+      <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
+      <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.jpg" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19">https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19</a> </p><p>提取码：mp19</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Go语言编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《Kubernetes权威指南：从Docker到Kubernetes实践全接触》</title>
+      <link href="/2023/05/24/Kubernetes%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8EDocker%E5%88%B0Kubernetes%E5%AE%9E%E8%B7%B5%E5%85%A8%E6%8E%A5%E8%A7%A6/"/>
+      <url>/2023/05/24/Kubernetes%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8EDocker%E5%88%B0Kubernetes%E5%AE%9E%E8%B7%B5%E5%85%A8%E6%8E%A5%E8%A7%A6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/lorogawptmcytwkuacpqwzjp.png" alt="《Kubernetes权威指南：从Docker到Kubernetes实践全接触》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>Kubernetes是由谷歌开源的容器集群管理系统，为容器化应用提供了资源调度、部署运行、服务发现、扩缩容等一整套功能。Kubernetes也是将“一切以服务（Service）为中心，一切围绕服务运转”作为指导思想的创新型产品，它的功能和架构设计自始至终地遵循了这一指导思想。构建在Kubernetes上的系统不仅可以独立运行在物理机、虚拟机集群或者企业私有云上，也可以被托管在公有云上。</p><p>《Kubernetes权威指南：从Docker到Kubernetes实践全接触（第5版）》总计12章，分别讲解Kubernetes的基本概念、实践指南、核心原理、开发指南、网络与存储、运维指南、新特性演进等内容。全书图文并茂、内容丰富、由浅入深、讲解全面，并围绕在生产环境中可能出现的问题，给出了大量典型案例，比如安全配置方案、网络方案、共享存储方案、高可用方案及Trouble Shooting技巧等，有很强的实战指导意义。本书的内容也随着Kubernetes的版本更新不断完善，目前涵盖了Kubernetes从1.0到1.19版本的主要特性，努力为Kubernetes用户提供全方位的Kubernetes技术指南。</p><p>无论是对于软件工程师、软件架构师、测试工程师、运维工程师、技术经理，还是对于资深IT人士，本书都极具参考价值。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>·龚正·</p><p>HPE高级顾问，从事IT工作20余年，在云计算、大数据、大型企业级应用等领域有丰富的咨询规划、架构设计和实施经验，负责过多个大型云平台的规划和建设，是电信、金融、互联网等领域的资深专家，也是《Kubernetes权威指南：企业级容器云实战》等书的作者。</p><p>·吴治辉·</p><p>HPE资深架构师，从事软件研发工作20余年，专注于电信软件和云计算方面的软件研发，有丰富的大型项目架构设计经验，是业界少有的具备很强编程能力的资深架构师，也是《ZeroCIce权威指南》《架构解密：从分布式到微服务》《Kubernetes权威指南：企业级容器云实战》《区块链轻松上手》等书的作者。</p><p>·闫健勇·</p><p>HPE高级项目经理、总架构师，从事电信行业系统建设工作20余年，主导了多项电信大型系统的架构设计和管理，对云计算和大数据在电信行业中的应用有丰富的经验，也是《Kubernetes权威指南：企业级容器云实战》等书的作者。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章 Kubernetes入门 1<br>1.1 了解Kubernetes 2<br>1.2 为什么要用Kubernetes 5<br>1.3 从一个简单的例子开始 7<br>1.3.1 环境准备 8<br>1.3.2 启动MySQL服务 8<br>1.3.3 启动Tomcat应用 11<br>1.3.4 通过浏览器访问网页 12<br>1.4 Kubernetes的基本概念和术语 14<br>1.4.1 资源对象概述 14<br>1.4.2 集群类 15<br>1.4.3 应用类 19<br>1.4.4 存储类 40<br>1.4.5 安全类 44<br>第2章 Kubernetes安装配置指南 47<br>2.1 系统要求 48<br>2.2 使用kubeadm工具快速安装Kubernetes集群 49<br>2.2.1 安装kubeadm 50<br>2.2.2 修改kubeadm的默认配置 50<br>2.2.3 下载Kubernetes的相关镜像 51<br>2.2.4 运行kubeadm init命令安装Master节点 52<br>2.2.5 将新的Node加入集群 57<br>2.2.6 安装CNI网络插件 59<br>2.2.7 验证Kubernetes集群是否工作正常 60<br>2.3 以二进制文件方式安装Kubernetes安全高可用集群 61<br>2.3.1 Master高可用部署架构 61<br>2.3.2 创建CA根证书 62<br>2.3.3 部署安全的etcd高可用集群 63<br>2.3.4 部署安全的Kubernetes Master高可用集群 68<br>2.3.5 部署Node的服务 85<br>2.3.6 kube-apiserver基于token的认证机制 89<br>2.4 使用私有镜像库的相关配置 90<br>2.5 Kubernetes的版本升级 91<br>2.5.1 二进制文件升级 91<br>2.5.2 使用kubeadm进行集群升级 92<br>2.6 CRI（容器运行时接口）详解 94<br>2.6.1 CRI概述 94<br>2.6.2 CRI的主要组件 94<br>2.6.3 Pod和容器的生命周期管理 95<br>2.6.4 面向容器级别的设计思路 96<br>2.6.5 尝试使用新的Docker-CRI来创建容器 97<br>2.6.6 CRI的进展 98<br>2.7 kubectl命令行工具用法详解 98<br>2.7.1 kubectl用法概述 99<br>2.7.2 kubectl子命令详解 99<br>2.7.3 kubectl可操作的资源对象详解 103<br>2.7.4 kubectl的公共参数说明 105<br>2.7.5 kubectl格式化输出 106<br>2.7.6 kubectl常用操作示例 108<br>第3章 深入掌握Pod 113<br>3.1 Pod定义详解 114<br>3.2 Pod的基本用法 120<br>3.3 静态Pod 125<br>3.4 Pod容器共享Volume 126<br>3.5 Pod的配置管理 129<br>3.5.1 ConfigMap概述 129<br>3.5.2 创建ConfigMap资源对象 129<br>3.5.3 在Pod中使用ConfigMap 137<br>3.5.4 使用ConfigMap的限制条件 143<br>3.6 在容器内获取Pod信息（Downward API） 144<br>3.6.1 环境变量方式 144<br>3.6.2 Volume挂载方式 148<br>3.6.3 Downward API支持设置的Pod和Container信息 153<br>3.7 Pod生命周期和重启策略 154<br>3.8 Pod健康检查和服务可用性检查 155<br>3.9 玩转Pod调度 159<br>3.9.1 Deployment或RC：全自动调度 162<br>3.9.2 NodeSelector：定向调度 163<br>3.9.3 NodeAffinity：Node亲和性调度 165<br>3.9.4 PodAffinity：Pod亲和与互斥调度策略 167<br>3.9.5 Taints和Tolerations（污点和容忍） 171<br>3.9.6 Pod Priority Preemption：Pod优先级调度 176<br>3.9.7 DaemonSet：在每个Node上都调度一个Pod 178<br>3.9.8 Job：批处理调度 181<br>3.9.9 Cronjob：定时任务 185<br>3.9.10 自定义调度器 188<br>3.9.11 Pod容灾调度 190<br>3.10 Init Container（初始化容器） 192<br>3.11 Pod的升级和回滚 196<br>3.11.1 Deployment的升级 196<br>3.11.2 Deployment的回滚 203<br>3.11.3 暂停和恢复Deployment的部署操作 205<br>3.11.4 其他管理对象的更新策略 207<br>3.12 Pod的扩缩容 209<br>3.12.1 手动扩缩容机制 209<br>3.12.2 自动扩缩容机制 211<br>3.13 使用StatefulSet搭建MongoDB集群 233<br>3.13.1 前提条件 234<br>3.13.2 部署StatefulSet 234<br>3.13.3 查看MongoDB集群的状态 238<br>3.13.4 StatefulSet的常见应用场景 241<br>第4章 深入掌握Service 245<br>4.1 Service定义详解 246<br>4.2 Service的概念和原理 248<br>4.2.1 Service的概念 248<br>4.2.2 Service的负载均衡机制 252<br>4.2.3 Service的多端口设置 254<br>4.2.4 将外部服务定义为Service 256<br>4.2.5 将Service暴露到集群外部 257<br>4.2.6 Service支持的网络协议 260<br>4.2.7 Kubernetes的服务发现机制 261<br>4.2.8 Headless Service的概念和应用 263<br>4.2.9 端点分片与服务拓扑 265<br>4.3 DNS服务搭建和配置指南 274<br>4.3.1 修改每个Node上kubelet的DNS启动参数 276<br>4.3.2 部署CoreDNS服务 276<br>4.3.3 服务名的DNS解析 280<br>4.3.4 CoreDNS的配置说明 282<br>4.4 Node本地DNS缓存 284<br>4.5 Pod的DNS域名相关特性 291<br>4.5.1 Pod的DNS域名 291<br>4.5.2 为Pod自定义hostname和subdomain 292<br>4.5.3 Pod的DNS策略 294<br>4.5.4 Pod中的自定义DNS配置 295<br>4.6 Ingress 7层路由机制 297<br>4.6.1 一个完整的例子（Ingress Controller+Ingress策略+客户端访问） 298<br>4.6.2 Ingress资源对象详解 309<br>4.6.3 Ingress策略配置详解 315<br>4.6.4 Ingress的TLS安全设置 319<br>第5章 核心组件的运行机制 326<br>5.1 Kubernetes API Server原理解析 327<br>5.1.1 Kubernetes API Server概述 327<br>5.1.2 API Server架构解析 330<br>5.1.3 独特的Kubernetes Proxy API接口 335<br>5.1.4 集群功能模块之间的通信 336<br>5.1.5 API Server网络隔离的设计 338<br>5.2 Controller Manager原理解析 339<br>5.2.1 副本调度控制器 340<br>5.2.2 Node Controller 342<br>5.2.3 ResourceQuota Controller 343<br>5.2.4 Namespace Controller 345<br>5.2.5 Service Controller与Endpoints Controller 345<br>5.3 Scheduler原理解析 346<br>5.3.1 Scheduler的调度流程 347<br>5.3.2 Scheduler Framework 349<br>5.3.3 多调度器特性 351<br>5.4 kubelet运行机制解析 352<br>5.4.1 节点管理 352<br>5.4.2 Pod管理 353<br>5.4.3 容器健康检查 354<br>5.4.4 cAdvisor资源监控 355<br>5.4.5 容器运行时 357<br>5.5 kube-proxy运行机制解析 359<br>5.5.1 第一代Proxy 360<br>5.5.2 第二代Proxy 361<br>5.5.2 第三代Proxy 362<br>第6章 深入分析集群安全机制 364<br>6.1 API Server认证管理 365<br>6.1.1 HTTPS证书认证 366<br>6.1.2 HTTP Bearer Token认证 367<br>6.1.3 OpenID Connect Token第三方认证 368<br>6.1.4 Authenticating Proxy（认证代理） 372<br>6.2 API Server授权管理 373<br>6.2.1 ABAC授权模式详解 374<br>6.2.2 Webhook授权模式详解 377<br>6.2.3 RBAC授权模式详解 380<br>6.2.4 Node授权模式详解 405<br>6.3 Admission Control 406<br>6.4 Service Account 410<br>6.5 Secret私密凭据 415<br>6.6 Pod安全策略 419<br>6.6.1 PodSecurityPolicy的工作机制 419<br>6.6.2 PodSecurityPolicy配置详解 421<br>6.6.3 PodSecurityPolicy策略示例 427<br>6.6.4 PodSecurityPolicy的RBAC授权 431<br>6.6.5 Pod安全设置（Security Context）详解 436<br>第7章 网络原理 445<br>7.1 Kubernetes网络模型 446<br>7.2 Docker网络基础 448<br>7.2.1 网络命名空间 448<br>7.2.2 Veth设备对 451<br>7.2.3 网桥 454<br>7.2.4 iptables和Netfilter 456<br>7.2.5 路由 459<br>7.3 Docker的网络实现 461<br>7.3.1 查看Docker启动后的系统情况 463<br>7.3.2 查看容器启动后的网络配置（容器无端口映射） 465<br>7.3.3 查看容器启动后的网络配置（容器有端口映射） 468<br>7.3.4 Docker的网络局限性 469<br>7.4 Kubernetes的网络实现 470<br>7.4.1 容器到容器的通信 470<br>7.4.2 Pod之间的通信 471<br>7.5 Pod和Service网络实战 474<br>7.5.1 部署一个RC&#x2F;Pod 476<br>7.5.2 发布一个服务 481<br>7.6 CNI网络模型 489<br>7.6.1 CNM网络模型简介 489<br>7.6.2 CNI网络模型详解 490<br>7.6.3 在Kubernetes中使用网络插件 507<br>7.7 开源容器网络方案 508<br>7.7.1 Flannel插件的原理和部署示例 508<br>7.7.2 Open vSwitch插件的原理和部署示例 513<br>7.7.3 直接路由的原理和部署示例 518<br>7.7.4 Calico插件的原理和部署示例 521<br>7.8 Kubernetes的网络策略 541<br>7.8.1 网络策略设置说明 542<br>7.8.2 Selector功能说明 544<br>7.8.3 为命名空间配置默认的网络策略 545<br>7.8.4 网络策略应用示例 547<br>7.8.5 NetworkPolicy的发展 550<br>7.9 Kubernetes对IPv4和IPv6双栈的支持 551<br>7.9.1 为Kubernetes集群启用IPv4和IPv6双栈 551<br>7.9.2 Pod双栈IP地址验证 554<br>7.9.3 Service双栈IP地址验证 557<br>第8章 存储原理和应用 560<br>8.1 Kubernetes存储机制概述 561<br>8.1.1 将资源对象映射为存储卷 562<br>8.1.2 Node本地存储卷 569<br>8.2 持久卷（Persistent Volume）详解 573<br>8.2.1 PV和PVC的工作原理 574<br>8.2.2 PV详解 581<br>8.2.3 PVC详解 587<br>8.2.4 Pod使用PVC 589<br>8.2.5 StorageClass详解 593<br>8.3 动态存储管理实战：GlusterFS 600<br>8.3.1 准备工作 600<br>8.3.2 创建GlusterFS管理服务容器集群 600<br>8.3.3 创建Heketi服务 603<br>8.3.4 通过Heketi管理GlusterFS集群 607<br>8.3.5 定义StorageClass 610<br>8.3.6 定义PVC 610<br>8.3.7 Pod使用PVC的存储资源 613<br>8.4 CSI存储机制详解 614<br>8.4.1 CSI的设计背景 614<br>8.4.2 CSI的核心组件和部署架构 615<br>8.4.3 CSI存储插件应用实战 617<br>8.4.4 CSI存储快照管理 632<br>8.4.5 CSI的发展 638<br>第9章 Kubernetes开发指南 647<br>9.1 REST简述 648<br>9.2 Kubernetes API详解 650<br>9.2.1 Kubernetes API概述 650<br>9.2.2 Kubernetes API版本的演进策略 658<br>9.2.3 API Groups（API组） 658<br>9.2.4 API REST的方法说明 661<br>9.2.5 API Server响应说明 663<br>9.3 使用Fabric8访问Kubernetes API 665<br>9.3.1 具体应用示例 666<br>9.3.2 其他客户端库 679<br>9.4 Kubernetes API的扩展 680<br>9.4.1 使用CRD扩展API资源 681<br>9.4.2 使用API聚合机制扩展API资源 692<br>第10章 Kubernetes运维管理 702<br>10.1 Node管理 703<br>10.1.1 Node的隔离与恢复 703<br>10.1.2 Node的扩容 704<br>10.2 更新资源对象的Label 705<br>10.3 Namespace：集群环境共享与隔离 706<br>10.3.1 创建Namespace 706<br>10.3.2 定义Context 707<br>10.3.3 设置工作组在特定Context中工作 708<br>10.4 Kubernetes资源管理 710<br>10.4.1 计算资源管理 712<br>10.4.2 资源配置范围管理（LimitRange） 722<br>10.4.3 资源服务质量管理（Resource QoS） 730<br>10.4.4 资源配额管理（Resource Quotas） 738<br>10.4.5 ResourceQuota和LimitRange实践 744<br>10.4.6 Pod中多个容器共享进程命名空间 754<br>10.4.7 PID资源管理 757<br>10.4.8 节点的CPU管理策略 757<br>10.4.9 拓扑管理器 761<br>10.5 资源紧缺时的Pod驱逐机制 766<br>10.5.1 驱逐时机 766<br>10.5.2 驱逐阈值 767<br>10.5.3 节点状态 768<br>10.5.4 节点状态的振荡 769<br>10.5.5 回收Node级别的资源 769<br>10.5.6 驱逐用户的Pod 770<br>10.5.7 资源最少回收量 771<br>10.5.8 节点资源紧缺情况下的系统行为 772<br>10.5.9 可调度的资源和驱逐策略实践 773<br>10.5.10 现阶段的问题 773<br>10.6 Pod Disruption Budget（主动驱逐保护） 774<br>10.7 Kubernetes集群监控 778<br>10.7.1 使用Metrics Server监控Node和Pod的CPU和内存使用数据 778<br>10.7.2 Prometheus+Grafana集群性能监控平台搭建 783<br>10.8 Kubernetes集群日志管理 803<br>10.8.1 容器应用和系统组件输出日志的各种场景 803<br>10.8.2 Fluentd+Elasticsearch+Kibana日志系统部署 807<br>10.8.3 部署日志采集sidecar工具采集容器日志 821<br>10.9 Kubernetes的审计机制 822<br>10.10 使用Web UI（Dashboard）管理集群 826<br>10.11 Helm：Kubernetes应用包管理工具 839<br>10.11.1 Helm的整体架构 840<br>10.11.2 Helm版本说明 840<br>10.11.3 Helm的安装 842<br>10.11.4 Helm的使用 843<br>10.11.5 Chart说明 857<br>10.11.6 搭建私有Chart仓库 858<br>第11章 Trouble Shooting指南 862<br>11.1 查看系统Event 863<br>11.2 查看容器日志 865<br>11.3 查看Kubernetes服务日志 866<br>11.4 常见问题 868<br>11.4.1 由于无法下载pause镜像导致Pod一直处于Pending状态 868<br>11.4.2 Pod创建成功，但RESTARTS数量持续增加 870<br>11.4.3 通过服务名无法访问服务 871<br>11.5 寻求帮助 872<br>第12章 Kubernetes开发中的新功能 875<br>12.1 对Windows容器的支持 876<br>12.1.1 在Windows Server上安装Docker 876<br>12.1.2 在Windows Server上部署Kubernetes Node组件 877<br>12.1.3 在Windows Server上部署容器应用和服务 886<br>12.1.4 Kubernetes支持的Windows容器特性、限制和发展趋势 892<br>12.2 对GPU的支持 896<br>12.2.1 环境准备 897<br>12.2.2 在容器中使用GPU资源 900<br>12.2.3 发展趋势 902<br>12.3 Pod的垂直扩缩容 902<br>12.3.1 VPA详解 903<br>12.3.2 安装Vertical Pod Autoscaler 906<br>12.3.3 为Pod设置垂直扩缩容 906<br>12.3.4 注意事项 907<br>12.4 Kubernetes生态系统与演进路线 908<br>12.4.1 Kubernetes与CNCF 908<br>12.4.2 Kubernetes的演进路线 910<br>12.4.3 Kubernetes的开发模式 914<br>附录A Kubernetes核心服务配置详解 915</p><h3 id="Kubernetes权威指南：从Docker到Kubernetes实践全接触-PDF-下载地址"><a href="#Kubernetes权威指南：从Docker到Kubernetes实践全接触-PDF-下载地址" class="headerlink" title="Kubernetes权威指南：从Docker到Kubernetes实践全接触 PDF 下载地址:"></a>Kubernetes权威指南：从Docker到Kubernetes实践全接触 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/10h6b_BpJcqYDBuhogOm_oA?pwd=5lqf">https://pan.baidu.com/s/10h6b_BpJcqYDBuhogOm_oA?pwd=5lqf</a> </p><p>提取码：5lqf</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Docker </tag>
             
         </tags>
       
