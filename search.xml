@@ -202,6 +202,39 @@
     
     
     <entry>
+      <title>《Go专家编程》</title>
+      <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
+      <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.jpg" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19">https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19</a> </p><p>提取码：mp19</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> Go语言编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《Docker容器与容器云（第2版）》</title>
       <link href="/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/"/>
       <url>/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/</url>
@@ -240,39 +273,6 @@
       <url>/2023/05/24/Go%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</url>
       
         <content type="html"><![CDATA[<p><img src="/images/o6fkcz9f5pj28fedxj7l7biszkbb6cvf.png" alt="《Go语言高级编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书从实践出发讲解Go语言编程的进阶知识。本书共6章，第1章简单回顾Go语言的发展历史；第2章和第3章系统介绍CGO编程和Go汇编语言的用法；第4章对RPC和Protobuf技术进行深入介绍，并讲述如何打造一个自己的RPC系统；第5章介绍工业级环境的Web系统的设计和相关技术；第6章介绍Go语言在分布式领域的一些编程技术。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>柴树杉</p><p>国内第一批的Go语言爱好者，Go语言代码贡献者，CGO资深用户。同时对WebAssembly技术有一定研究，著有《WebAssembly标准入门》。Github账号为chai2010。</p><p>曹春晖</p><p>在Web领域工作多年，开源爱好者。对大型网站系统的架构和相关工具的实现很感兴趣，并且有一些研究成果。目前在滴滴平台技术部工作。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章 语言基础<br>1.1 Go语言创世纪<br>1.2 Hello, World 的革命<br>1.3 数组、字符串和切片<br>1.4 函数、方法和接口<br>1.5 面向并发的内存模型<br>1.6 常见的并发模式<br>1.7 错误和异常<br>1.8 补充说明<br>第2章 CGO编程<br>2.1 快速入门<br>2.2 CGO基础<br>2.3 类型转换<br>2.4 函数调用<br>2.5 内部机制<br>2.6 实战: 封装qsort<br>2.7 CGO内存模型<br>2.8 C++类包装<br>2.9 静态库和动态库<br>2.10 编译和链接参数<br>2.11 补充说明<br>第3章 汇编语言<br>3.1 快速入门<br>3.2 计算机结构<br>3.3 常量和全局变量<br>3.4 函数<br>3.5 控制流<br>3.6 再论函数<br>3.7 汇编语言的威力<br>3.8 例子：Goroutine ID<br>3.9 Delve调试器<br>3.10 补充说明<br>第4章 RPC和Protobuf<br>4.1 RPC入门<br>4.2 Protobuf<br>4.3 玩转RPC<br>4.4 gRPC入门<br>4.5 gRPC进阶<br>4.6 gRPC和Protobuf扩展<br>4.7 pbgo: 基于Protobuf的框架<br>4.8 grpcurl工具<br>4.9 补充说明<br>第5章 Go和Web<br>5.1 Web开发简介<br>5.2 请求路由<br>5.3 中间件<br>5.4 请求校验<br>5.5 和数据库打交道<br>5.6 服务流量限制<br>5.7 大型Web项目分层<br>5.8 接口和表驱动开发<br>5.9 灰度发布和A&#x2F;B测试<br>5.10 补充说明<br>第6章 分布式系统<br>6.1 分布式 id 生成器<br>6.2 分布式锁<br>6.3 延时任务系统<br>6.4 分布式搜索引擎<br>6.5 负载均衡<br>6.6 分布式配置管理<br>6.7 分布式爬虫<br>6.8 补充说明<br>附录<br>附录A: Go语言常见坑<br>附录B: 有趣的代码片段</p><h3 id="Go语言高级编程-PDF-下载地址"><a href="#Go语言高级编程-PDF-下载地址" class="headerlink" title="Go语言高级编程 PDF 下载地址:"></a>Go语言高级编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1Chsb8grxKKCd8CJNHG9lXg?pwd=1lli">https://pan.baidu.com/s/1Chsb8grxKKCd8CJNHG9lXg?pwd=1lli</a> </p><p>提取码：1lli</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-          <category> 书籍推荐 </category>
-          
-          <category> 百度网盘PDF下载 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PDF下载 </tag>
-            
-            <tag> 运维 </tag>
-            
-            <tag> Go语言编程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>《Go专家编程》</title>
-      <link href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/"/>
-      <url>/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.jpg" alt="《Go专家编程》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>《Go专家编程》深入地讲解了Go语言常见特性的内部机制和实现方式，大部分内容源自对Go语言源码的分析，并从中提炼出实现原理。通过阅读本书，读者可以快速、轻松地了解Go语言的内部运作机制。</p><p>本书首先介绍Go语言常见的数据结构及控制结构的实现原理，包括管道、切片、Hash表、select和for-range等，这部分内容大都以几个精心准备的测验题目开头，每个测验题目均对应一个知识点，读者可以借此测验自身对该知识点的掌握程度。接着介绍了Go语言最基础的概念，包括协程的概念、协程调度模型、协程调度策略，以及内存分配和垃圾回收相关的内容。本书还介绍了一些标准库、异常处理和依赖管理等非语法相关但非常重要的内容。最后结合作者的见闻，整理了一些发生在真实项目中的编程陷阱。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>任洪彩，华为云原生团队核心成员，开源爱好者，深度参与CNCF（云原生计算基金会）旗下Kubernetes、Prometheus等项目贡献，Kubernetes资深成员，担任Kubernetes SIG-Instrumentation Approver，敏捷软件思想深度实践者，在Nokia、华为等公司参与过多个大型项目的研发与重构，对Go、C&#x2F;C++、Python、Swift等语言均有深入的研究与实践。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　常见数据结构的实现原理<br>1.1　管道<br>1.1.1　热身测验<br>1.1.2　特性速览<br>1.1.3　实现原理<br>1.2　slice<br>1.2.1　热身测验<br>1.2.2　特性速览<br>1.2.3　实现原理<br>1.2.4　切片表达式<br>1.3　map<br>1.3.1　热身测验<br>1.3.2　特性速览<br>1.3.3　实现原理<br>1.4　struct<br>1.4.1　热身测验<br>1.4.2　内嵌字段<br>1.4.3　方法受体<br>1.4.4　字段标签<br>1.5　iota<br>1.5.1　热身测验<br>1.5.2　特性速览<br>1.5.3　实现原理<br>1.6　string<br>1.6.1　热身测验<br>1.6.2　特性速览<br>1.6.3　实现原理<br>第2章　控制结构<br>2.1　select<br>2.1.1　热身测验<br>2.1.2　特性速览<br>2.1.3　实现原理<br>2.2　for-range<br>2.2.1　热身测验<br>2.2.2　特性速览<br>2.2.3　实现原理<br>第3章　协程<br>3.1　协程的概念<br>3.2　调度模型<br>3.3　调度策略<br>第4章　内存管理<br>4.1　内存分配<br>4.2　垃圾回收<br>4.3　逃逸分析<br>第5章　并发控制<br>5.1　channel<br>5.2　WaitGroup<br>5.3　context<br>5.4　Mutex<br>5.5　RWMutex<br>5.5.1　读写锁的数据结构<br>5.5.2　场景分析<br>第6章　反射<br>6.1　热身测验<br>6.2　接口<br>6.3　反射定律<br>第7章　测试<br>7.1　快速开始<br>7.1.1　单元测试<br>7.1.2　基准测试<br>7.1.3　示例测试<br>7.2　进阶测试<br>7.2.1　子测试<br>7.2.2　Main测试<br>7.3　实现原理<br>7.3.1　testing.common<br>7.3.2　testing.TB接口<br>7.3.3　单元测试的实现原理<br>7.3.4　性能测试的实现原理<br>7.3.5　示例测试的实现原理<br>7.3.6　Main测试的实现原理<br>7.3.7　gotest的工作机制<br>7.4　扩展阅读<br>7.4.1　测试参数<br>7.4.2　benchstat<br>第8章　异常处理<br>8.1　error<br>8.1.1　热身测验<br>8.1.2　基础error<br>8.1.3　链式error<br>8.1.4　工程迁移<br>8.2　defer<br>8.2.1　热身测验<br>8.2.2　约法三章<br>8.2.3　实现原理<br>8.2.4　性能优化<br>8.3　panic<br>8.3.1　热身测验<br>8.3.2　工作机制<br>8.3.3　源码剖析<br>8.4　recover<br>8.4.1　热身测验<br>8.4.2　工作机制<br>8.4.3　源码剖析<br>第9章　定时器<br>9.1　一次性定时器（Timer）<br>9.1.1　快速开始<br>9.1.2　实现原理<br>9.2　周期性定时器（Ticker）<br>9.2.1　快速开始<br>9.2.2　实现原理<br>9.3　runtimeTimer<br>9.3.1　实现原理<br>9.3.2　性能优化<br>9.4　案例分享<br>第10章　语法糖<br>10.1　简短变量声明符<br>10.1.1　热身测验<br>10.1.2　规则<br>10.2　可变参函数<br>第11章　版本管理<br>11.1　安装Go<br>11.2　删除Go<br>11.3　升级Go<br>11.4　Go版本管理器<br>11.4.1　快速开始<br>11.4.2　工作机制<br>11.4.3　小结<br>11.5　源码编译<br>11.5.1　源码下载<br>11.5.2　源码编译过程<br>第12章　Go语言依赖管理<br>12.1　GOPATH<br>12.1.1　GOROOT是什么<br>12.1.2　GOPATH是什么<br>12.1.3　依赖查找<br>12.1.4　GOPATH的缺点<br>12.2　vendor<br>12.2.1　vendor目录位置<br>12.2.2　搜索顺序<br>12.2.3　vendor的不足<br>12.3　GoModule<br>12.3.1　GoModule基础<br>12.3.2　快速实践<br>12.3.3　replace指令<br>12.3.4　exclude指令<br>12.3.5　indirect指令<br>12.3.6　版本选择机制<br>12.3.7　incompatible<br>12.3.8　伪版本<br>12.3.9　依赖包存储<br>12.3.10　go.sum<br>12.3.11　模块代理<br>12.3.12　GOSUMDB的工作机制<br>12.3.13　GOSUMDB的实现原理<br>12.3.14　第三方代理<br>12.3.15　私有模块<br>12.3.16　GoModule的演进<br>第13章　编程陷阱<br>13.1　切片扩容<br>13.2　空切片<br>13.3　append的本质<br>13.4　循环变量引用<br>13.5　协程引用循环变量<br>13.6　recover失效</p><h3 id="Go专家编程-PDF-下载地址"><a href="#Go专家编程-PDF-下载地址" class="headerlink" title="Go专家编程 PDF 下载地址:"></a>Go专家编程 PDF 下载地址:</h3><hr><p>链接：<a href="https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19">https://pan.baidu.com/s/1sdur-j2y9Exf3V3TAGZ_Rw?pwd=mp19</a> </p><p>提取码：mp19</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦    </p>]]></content>
       
       
       <categories>
@@ -466,6 +466,39 @@
     
     
     <entry>
+      <title>《Python深度学习》</title>
+      <link href="/2023/05/23/Python%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/05/23/Python%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/gvluhmjxgnjunsufyklkcyjlgiylhynr.png" alt="《Python深度学习》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><ul><li><p>深度学习名著重磅升级，涵盖Transformer架构等开创性进展</p></li><li><p>流行深度学习框架Keras之父执笔，文字生动、见解深刻</p></li><li><p>不用一个数学公式，利用直觉自然入门深度学习</p></li></ul><p>近年来，深度学习在自然语言处理、计算机视觉等领域取得了非凡的进展。从机器翻译和文本生成到自动驾驶和虚拟助手，我们受益于深度学习技术的逐渐普及。然而，深度学习还远未发挥全部潜力。欢迎来到深度学习的世界！在这个规模呈爆发式增长的领域，仍有许多“宝藏”等待你去发掘。</p><p>本书由流行深度学习框架Keras之父弗朗索瓦·肖莱执笔，不用数学公式，而用Python代码帮助你直观理解深度学习的核心思想。本书在第1版的基础上进行了大幅更新和增补，以体现深度学习领域的快速发展。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>【作者简介】</p><p>弗朗索瓦·肖莱（François Chollet）</p><p>谷歌公司深度学习科学家，流行深度学习框架Keras之父。Keras的GitHub星标数近6万，用户数量已超100万。此外，他也是TensorFlow框架的贡献者，个人Kaggle竞赛全球排名曾获第17名。利用Keras，他致力于普及深度学习技术和实现通用人工智能。</p><p>【译者简介】</p><p>张亮（hysic）</p><p>毕业于北京大学物理学院，核安全高级工程师，深谙机器学习和数据分析，译有《Python机器学习基础教程》《Python数据处理》等。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章　什么是深度学习 1<br>1.1　人工智能、机器学习和深度学习 1<br>1.1.1　人工智能 2<br>1.1.2　机器学习 2<br>1.1.3　从数据中学习规则与表示 3<br>1.1.4　深度学习之“深度” 5<br>1.1.5　用三张图理解深度学习的工作原理 7<br>1.1.6　深度学习已取得的进展 8<br>1.1.7　不要相信短期炒作 9<br>1.1.8　人工智能的未来 10<br>1.2　深度学习之前：机器学习简史 10<br>1.2.1　概率建模 11<br>1.2.2　早期神经网络 11<br>1.2.3　核方法 11<br>1.2.4　决策树、随机森林和梯度提升机 12<br>1.2.5　回到神经网络 13<br>1.2.6　深度学习有何不同 14<br>1.2.7　机器学习现状 14<br>1.3　为什么要用深度学习，为什么是现在 16<br>1.3.1　硬件 17<br>1.3.2　数据 17<br>1.3.3　算法 18<br>1.3.4　新一轮投资热潮 18<br>1.3.5　深度学习的普及 19<br>1.3.6　这种趋势会持续下去吗 20<br>第2章　神经网络的数学基础 21<br>2.1　初识神经网络 21<br>2.2　神经网络的数据表示 25<br>2.2.1　标量（0阶张量） 25<br>2.2.2　向量（1阶张量） 25<br>2.2.3　矩阵（2阶张量） 26<br>2.2.4　3阶张量与更高阶的张量 26<br>2.2.5　关键属性 26<br>2.2.6　在NumPy中操作张量 28<br>2.2.7　数据批量的概念 28<br>2.2.8　现实世界中的数据张量实例 29<br>2.2.9　向量数据 29<br>2.2.10　时间序列数据或序列数据 29<br>2.2.11　图像数据 30<br>2.2.12　视频数据 31<br>2.3　神经网络的“齿轮”：张量运算 31<br>2.3.1　逐元素运算 32<br>2.3.2　广播 33<br>2.3.3　张量积 34<br>2.3.4　张量变形 36<br>2.3.5　张量运算的几何解释 37<br>2.3.6　深度学习的几何解释 40<br>2.4　神经网络的“引擎”：基于梯度的优化 40<br>2.4.1　什么是导数 41<br>2.4.2　张量运算的导数：梯度 42<br>2.4.3　随机梯度下降 44<br>2.4.4　链式求导：反向传播算法 46<br>2.5　回顾第一个例子 51<br>2.5.1　用TensorFlow 从头开始重新实现第一个例子 52<br>2.5.2　完成一次训练步骤 54<br>2.5.3　完整的训练循环 55<br>2.5.4　评估模型 55<br>2.6　本章总结 56<br>第3章　Keras 和TensorFlow 入门 57<br>3.1　TensorFlow 简介 57<br>3.2　Keras 简介 58<br>3.3　Keras 和TensorFlow 简史 59<br>3.4　建立深度学习工作区 60<br>3.4.1　Jupyter笔记本：运行深度学习实验的首选方法 60<br>3.4.2　使用Colaboratory 61<br>3.5　TensorFlow入门 63<br>3.5.1　常数张量和变量 64<br>3.5.2　张量运算：用TensorFlow进行数学运算 66<br>3.5.3　重温GradientTape API 66<br>3.5.4　一个端到端的例子：用TensorFlow编写线性分类器 67<br>3.6　神经网络剖析：了解核心Keras API 71<br>3.6.1　层：深度学习的基础模块 71<br>3.6.2　从层到模型 74<br>3.6.3　编译步骤：配置学习过程 75<br>3.6.4　选择损失函数 77<br>3.6.5　理解fit()方法 77<br>3.6.6　监控验证数据上的损失和指标 78<br>3.6.7　推断：在训练后使用模型 79<br>3.7　本章总结 80<br>第4章　神经网络入门：分类与回归 81<br>4.1　影评分类：二分类问题示例 82<br>4.1.1　IMDB 数据集 82<br>4.1.2　准备数据 83<br>4.1.3　构建模型 84<br>4.1.4　验证你的方法 87<br>4.1.5　利用训练好的模型对新数据进行预测 90<br>4.1.6　进一步实验 90<br>4.1.7　小结 90<br>4.2　新闻分类：多分类问题示例 91<br>4.2.1　路透社数据集 91<br>4.2.2　准备数据 92<br>4.2.3　构建模型 92<br>4.2.4　验证你的方法 93<br>4.2.5　对新数据进行预测 96<br>4.2.6　处理标签和损失的另一种方法 96<br>4.2.7　拥有足够大的中间层的重要性 96<br>4.2.8　进一步实验 97<br>4.2.9　小结 97<br>4.3　预测房价：标量回归问题示例 97<br>4.3.1　波士顿房价数据集 98<br>4.3.2　准备数据 98<br>4.3.3　构建模型 99<br>4.3.4　利用K折交叉验证来验证你的方法 99<br>4.3.5　对新数据进行预测 103<br>4.3.6　小结 103<br>4.4　本章总结 104<br>第5章　机器学习基础 105<br>5.1　泛化：机器学习的目标 105<br>5.1.1　欠拟合与过拟合 105<br>5.1.2　深度学习泛化的本质 110<br>5.2　评估机器学习模型 115<br>5.2.1　训练集、验证集和测试集 115<br>5.2.2　超越基于常识的基准 118<br>5.2.3　模型评估的注意事项 119<br>5.3　改进模型拟合 119<br>5.3.1　调节关键的梯度下降参数 119<br>5.3.2　利用更好的架构预设 121<br>5.3.3　提高模型容量 121<br>5.4　提高泛化能力 123<br>5.4.1　数据集管理 123<br>5.4.2　特征工程 124<br>5.4.3　提前终止 125<br>5.4.4　模型正则化 125<br>5.5　本章总结 132<br>第6章　机器学习的通用工作流程 133<br>6.1　定义任务 134<br>6.1.1　定义问题 134<br>6.1.2　收集数据集 135<br>6.1.3　理解数据 138<br>6.1.4　选择衡量成功的指标 139<br>6.2　开发模型 139<br>6.2.1　准备数据 139<br>6.2.2　选择评估方法 140<br>6.2.3　超越基准 141<br>6.2.4　扩大模型规模：开发一个过拟合的模型 142<br>6.2.5　模型正则化与调节超参数 142<br>6.3　部署模型 143<br>6.3.1　向利益相关者解释你的工作并设定预期 143<br>6.3.2　部署推断模型 143<br>6.3.3　监控模型在真实环境中的性能 146<br>6.3.4　维护模型 146<br>6.4　本章总结 147<br>第7章　深入Keras 148<br>7.1　Keras 工作流程 148<br>7.2　构建Keras 模型的不同方法 149<br>7.2.1　序贯模型 149<br>7.2.2　函数式API 152<br>7.2.3　模型子类化 157<br>7.2.4　混合使用不同的组件 159<br>7.2.5　用正确的工具完成工作 160<br>7.3　使用内置的训练循环和评估循环 160<br>7.3.1　编写自定义指标 161<br>7.3.2　使用回调函数 162<br>7.3.3　编写自定义回调函数 164<br>7.3.4　利用TensorBoard进行监控和可视化 165<br>7.4　编写自定义的训练循环和评估循环 167<br>7.4.1　训练与推断 168<br>7.4.2　指标的低阶用法 169<br>7.4.3　完整的训练循环和评估循环 169<br>7.4.4　利用tf.function加快运行速度 171<br>7.4.5　在fit()中使用自定义训练循环 172<br>7.5　本章总结 174<br>第8章　计算机视觉深度学习入门 175<br>8.1　卷积神经网络入门 176<br>8.1.1　卷积运算 178<br>8.1.2　最大汇聚运算 182<br>8.2　在小型数据集上从头开始训练一个卷积神经网络 184<br>8.2.1　深度学习对数据量很小的问题的适用性 184<br>8.2.2　下载数据 185<br>8.2.3　构建模型 . 187<br>8.2.4　数据预处理 189<br>8.2.5　使用数据增强 193<br>8.3　使用预训练模型 196<br>8.3.1　使用预训练模型做特征提取 197<br>8.3.2　微调预训练模型 204<br>8.4　本章总结 208<br>第9章　计算机视觉深度学习进阶 209<br>9.1　三项基本的计算机视觉任务 209<br>9.2　图像分割示例 210<br>9.3　现代卷积神经网络架构模式 218<br>9.3.1　模块化、层次结构和复用 218<br>9.3.2　残差连接 221<br>9.3.3　批量规范化 224<br>9.3.4　深度可分离卷积 226<br>9.3.5　综合示例：一个类似Xception的迷你模型 227<br>9.4　解释卷积神经网络学到的内容 229<br>9.4.1　中间激活值的可视化 230<br>9.4.2　卷积神经网络滤波器的可视化 235<br>9.4.3　类激活热力图的可视化 241<br>9.5　本章总结 246<br>第10章　深度学习处理时间序列 247<br>10.1　不同类型的时间序列任务 247<br>10.2　温度预测示例 248<br>10.2.1　准备数据 251<br>10.2.2　基于常识、不使用机器学习的基准 254<br>10.2.3　基本的机器学习模型 254<br>10.2.4　一维卷积模型 256<br>10.2.5　第一个RNN 基准 258<br>10.3　理解RNN 259<br>10.4　RNN 的高级用法 265<br>10.4.1　利用循环dropout 降低过拟合 265<br>10.4.2　循环层堆叠 268<br>10.4.3　使用双向RNN 269<br>10.4.4　进一步实验 271<br>10.5　本章总结 272<br>第11章　深度学习处理文本 273<br>11.1　自然语言处理概述 273<br>11.2　准备文本数据 274<br>11.2.1　文本标准化 275<br>11.2.2　文本拆分（词元化） 276<br>11.2.3　建立词表索引 277<br>11.2.4　使用TextVectorization层 278<br>11.3　表示单词组的两种方法：集合和序列 282<br>11.3.1　准备IMDB 影评数据 282<br>11.3.2　将单词作为集合处理：词袋方法 284<br>11.3.3　将单词作为序列处理：序列模型方法 289<br>11.4　Transformer架构 298<br>11.4.1　理解自注意力 298<br>11.4.2　多头注意力 302<br>11.4.3　Transformer编码器 303<br>11.4.4　何时使用序列模型而不是词袋模型 309<br>11.5　超越文本分类：序列到序列学习 310<br>11.5.1　机器翻译示例 312<br>11.5.2　RNN 的序列到序列学习 314<br>11.5.3　使用Transformer 进行序列到序列学习 318<br>11.6　本章总结 323<br>第12章　生成式深度学习 324<br>12.1　文本生成 325<br>12.1.1　生成式深度学习用于序列生成的简史 325<br>12.1.2　如何生成序列数据 326<br>12.1.3　采样策略的重要性 327<br>12.1.4　用Keras 实现文本生成 328<br>12.1.5　带有可变温度采样的文本生成回调函数 331<br>12.1.6　小结 334<br>12.2　DeepDream 334<br>12.2.1　用Keras 实现DeepDream 335<br>12.2.2　小结 341<br>12.3　　神经风格迁移 341<br>12.3.1　内容损失 342<br>12.3.2　风格损失 342<br>12.3.3　用Keras 实现神经风格迁移 343<br>12.3.4　小结 348<br>12.4　用变分自编码器生成图像 348<br>12.4.1　从图像潜在空间中采样 348<br>12.4.2　图像编辑的概念向量 350<br>12.4.3　变分自编码器 350<br>12.4.4　用Keras 实现变分自编码器 352<br>12.4.5　小结 357<br>12.5　生成式对抗网络入门 358<br>12.5.1　简要实现流程 359<br>12.5.2　诸多技巧 360<br>12.5.3　CelebA 数据集 360<br>12.5.4　判别器 361<br>12.5.5　生成器 362<br>12.5.6　对抗网络 364<br>12.5.7　小结 366<br>12.6　本章总结 367<br>第13章　适合现实世界的最佳实践 368<br>13.1　将模型性能发挥到极致 368<br>13.1.1　超参数优化 368<br>13.1.2　模型集成 375<br>13.2　加速模型训练 376<br>13.2.1　使用混合精度加快GPU上的训练速度 377<br>13.2.2　多GPU训练 380<br>13.2.3　TPU训练 382<br>13.3　本章总结 384<br>第14章　总结 385<br>14.1　重点概念回顾 385<br>14.1.1　人工智能的多种方法 385<br>14.1.2　深度学习在机器学习领域中的特殊之处 386<br>14.1.3　如何看待深度学习 386<br>14.1.4　关键的推动技术 387<br>14.1.5　机器学习的通用工作流程 388<br>14.1.6　关键网络架构 388<br>14.1.7　可能性空间 392<br>14.2　深度学习的局限性 394<br>14.2.1　将机器学习模型拟人化的风险 394<br>14.2.2　自动机与智能体 396<br>14.2.3　局部泛化与极端泛化 397<br>14.2.4　智能的目的 399<br>14.2.5　逐步提高泛化能力 400<br>14.3　如何实现更加通用的人工智能 401<br>14.3.1　设定正确目标的重要性：捷径法则 401<br>14.3.2　新目标 402<br>14.4　实现智能：缺失的内容 403<br>14.4.1　智能是对抽象类比的敏感性 404<br>14.4.2　两种抽象 405<br>14.4.3　深度学习所缺失的那一半 407<br>14.5　深度学习的未来 408<br>14.5.1　模型即程序 408<br>14.5.2　将深度学习与程序合成融合 409<br>14.5.3　终身学习和模块化子程序复用 411<br>14.5.4　长期愿景 412<br>14.6　了解快速发展的领域的最新进展 413<br>14.6.1　在Kaggle 上练习解决现实世界的问题 413<br>14.6.2　在arXiv上了解最新进展 414<br>14.6.3　探索Keras 生态系统 414<br>14.7　结束语 414</p><h3 id="Python深度学习-PDF-下载"><a href="#Python深度学习-PDF-下载" class="headerlink" title="Python深度学习 PDF 下载"></a>Python深度学习 PDF 下载</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1XjcQeZsDM7QF7bBRlWzNuw?pwd=8p9d">https://pan.baidu.com/s/1XjcQeZsDM7QF7bBRlWzNuw?pwd=8p9d</a></p><p>提取码: 8p9d</p><p>复制这段内容后打开百度网盘手机App，操作更方便哦</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《持续交付2.0：业务引领的DevOps精要》</title>
       <link href="/2023/05/23/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%982.0%EF%BC%9A%E4%B8%9A%E5%8A%A1%E5%BC%95%E9%A2%86%E7%9A%84DevOps%E7%B2%BE%E8%A6%81/"/>
       <url>/2023/05/23/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%982.0%EF%BC%9A%E4%B8%9A%E5%8A%A1%E5%BC%95%E9%A2%86%E7%9A%84DevOps%E7%B2%BE%E8%A6%81/</url>
@@ -598,6 +631,33 @@
     
     
     <entry>
+      <title>本站所有文档密码</title>
+      <link href="//mima/"/>
+      <url>//mima/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">  <script id="hbeData" type="hbeData" data-hmacdigest="8db921aceeece298fa0ee0c99b8d3229beacb72c92e02fe4c1e252f461de7186">7c351404e46fa1c7280678d51bf9554c54ebb642ef2fdc7f9d2e4e83b89517e84c2b4fa42deb4a15a5e466b16087a1cb77ef0bc6c5672c6fa7950d637c05b9f18ee4bb8c88dc6442955d25749c1de471a0aacf3a752a169658acd879372ae5a669d756844de2c7c154cc10a9038bf4f72217f859aeab3eaffbd4379fa0d1b1fd324da80ab45781acb4f43cd8f467c2aa223ab9b684cc7ea3313a51551eb5b97debd6d71e067781a937932c4ac84c69a4e307af4c80ba5a1a768ed2e3be20e59d3c684778afe7a20d5f0eafae7338aa9b16557b54c07be3cea4f2ee8d5690a128e9e5aedf5c4fe18f249e2500953adf8bb6777996ea50c338fb04d4e2661aa8f7798536c6cc5bedc6b8ea654bc1ff6aead4d0775a8dfb00c39d1a39668187b3c13d6259d800878d07d3a3e81547653401df1c05b1b0c84fb84c6f7d5ee5778b0ee4895602215ca19f8e46f1142bb607d0ab5c2fc1e6861d086da9eca8f72011d65bbae25bd7d57ac243548014f56aabea40c4133db7893eb69dc67faffe84ca0669108db026bdb7766221fb8c4d1a477d4ba99fa188741adb17f05896200f41f31a049104e53c40d1cdcbe80b04ec70b802413a48b31d317ecaf6cd7b9a2a8b894ef70619db14193b21aa9e4f12b8a09195fa8327e64261539f58030f3983d068c98c43fb9fb1f3a489a9c937fa40a0b706f7a861a2aa9e29cfc5a5ca9434a25da38a7e6455bd0be779aa0637930737bf3bd62a5d67d4c81ee2750c8d00426cce0dc134ad106059ae742b8da21864298d4369dbd6e15c7eba1ccd398b264a653206f591d9987da0ad189727fd5b6c3636d3577c424bf58ed3a317148fa95e5e9aca0309c1a12d6b2eb42066d7494b3c54a55d2514939eb08773d890152c8d7a79076c9f566d2fbe2413eecd912bd26e92b4ba6ccbd988757fea94f2db39202d91607c4079e5cccead49d816606bf109d696790e9854abaf34fcb2d24bdbc921c30dbb0604615b63e4392cebbbd271be5e3fff1654ec45ca81e4f390762882245fbe09adb42362474bb6d336ad0ade506b429dd52409dba3999059b24b05c77290ce41568ca886eccb6c7f604d5261d005f2fea5a00c33dcfe002becdf9bda7adf88be3a8350e23a304ba1165d0ea9fa1bf9008a317cb879794a0f61764fcda6a68fe2218ebda838a6242c2fc91409a93f1d0925c8258e752026682ab2c9efcf376ef38c60699c1417e4150ebcc540285661f43f10520c23128aa3de1b9aabfae3bd2a399539567909ac11b09adab08ae744cd9ef2831e3b39a9cb6355b1b9981500f0433b29489740b775c3859f64d1472a0fefebee360eb20657321c77911976a6990d42e3c2f68114121ac8fbf39be5175ebeeb001a8ed72a9fcd1d901d213ce56e05fefc7f846516092b115f7fb4ca471896a7553ca2fd86923ff7381703e5af202d68117a603a830642b3d228d8d769e6dcf2bb96450d83e993da403ea330b26faf1df65e5e140d0d5fc6973491cd91d0b2da53c631ae501c3a19b5a94a1723204d1755e3616b4d8e3e4a87722e87cd73880d48d14cd515ddaa54bf797de4cef3b39458600c08cb1f297c146f986740cb6c937d81391ef600cb84e57382c78c563acd2d1703d74341f65d1e2f34f86abf93b566acfdd09a1f45611289d4ef66373882e75780ac555f6d1b18bc978f29c7005b7e14671a67abd408b9149eac26befbdc182fa1626ae7349ae6ee3858d3371e21cc5d3c75614b3245bed02bab7c19de59f5c93987471d9628c509516aa3e15bbd3fb7de6c8d9dbc0bebf70d92b69205e2721bbd0d520177c3245fc62a5eeee2e04f9ad967149bf0888d4104c8428b5a33357cbf6ade56afe98e6ff4451d9d4a18ee4ba40a90b887f1bf00b3b12b6f124e908a7ab2a751665570d88a8f8bbb8c94159643b896e23ffa24542b4ffa576387f30e791b58dc61aa5711c74d37a667bcf8dcc3a36cfbb08b3135aea050fcc854d2eaab35941f85164d8c3fd9461130ea4639ddc88b5e41144d319447fc32b1775ef4a73bf1614e4c73233ad4575849ccad5f03f58d5a3ddcefd516695517f03e898737ac02abb21236f78688450f30ddd0339ee8f65e7c63df1ebefbf53904c9b624e185e22242f7941fb71028d62e44dab5068af8af4ae14c8ba2226eb084e4c1eb550e3547dd666824f2884c7a725d72f2e8dde649d24bbc382eccfae035c953936eba6650c79ced5e70afb93b1e10b1ddd64017ef419046bd05785caf1c84c2232c325c21dbcba87defd4ea6cc58683b8a030bddf935bcb8e4d0c22b43cf0b4f42d6a1e4c6f3372e1185a05e3f82bff3ca98538aa42203ee0abf8b977f547cc4fec7bbd86aaa4cbafe15e4ec33bb2482f015717a0ec7f4b9f376a36a83ff2925e492598a705e74ed6a0678e73b5141dfd51811e56a877d59f934daf9b842f947d64f39510fed315af39446a0fc4ce0e3ed78036b8d0b44543867992bf1782727659cfaaf83890f15a84eaa63c184bd1dc89ff5c0a27b7e86c8a1ed806d6f188a117b9f46d9ace1ef33efce69fe85bba37f7dae34ed230757b66944c24c5e8e24d35a5893845aa1cba0d8df2dd803197535e3379f57ba70eb6b1c388d47d0d6cc0ffda70e7278845724db5134f70005fa40e541bbe8bbc6324d5aa</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-flip">      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 此文章需要要密码才可以查看.">您好, 此文章需要要密码才可以查看.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> PDF密码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《Python编程：从入门到实践》</title>
       <link href="/2023/05/19/Python%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/"/>
       <url>/2023/05/19/Python%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/</url>
@@ -623,33 +683,6 @@
             <tag> 编程 </tag>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>本站所有文档密码</title>
-      <link href="//mima/"/>
-      <url>//mima/</url>
-      
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">  <script id="hbeData" type="hbeData" data-hmacdigest="8db921aceeece298fa0ee0c99b8d3229beacb72c92e02fe4c1e252f461de7186">7c351404e46fa1c7280678d51bf9554c54ebb642ef2fdc7f9d2e4e83b89517e84c2b4fa42deb4a15a5e466b16087a1cb77ef0bc6c5672c6fa7950d637c05b9f18ee4bb8c88dc6442955d25749c1de471a0aacf3a752a169658acd879372ae5a669d756844de2c7c154cc10a9038bf4f72217f859aeab3eaffbd4379fa0d1b1fd324da80ab45781acb4f43cd8f467c2aa223ab9b684cc7ea3313a51551eb5b97debd6d71e067781a937932c4ac84c69a4e307af4c80ba5a1a768ed2e3be20e59d3c684778afe7a20d5f0eafae7338aa9b16557b54c07be3cea4f2ee8d5690a128e9e5aedf5c4fe18f249e2500953adf8bb6777996ea50c338fb04d4e2661aa8f7798536c6cc5bedc6b8ea654bc1ff6aead4d0775a8dfb00c39d1a39668187b3c13d6259d800878d07d3a3e81547653401df1c05b1b0c84fb84c6f7d5ee5778b0ee4895602215ca19f8e46f1142bb607d0ab5c2fc1e6861d086da9eca8f72011d65bbae25bd7d57ac243548014f56aabea40c4133db7893eb69dc67faffe84ca0669108db026bdb7766221fb8c4d1a477d4ba99fa188741adb17f05896200f41f31a049104e53c40d1cdcbe80b04ec70b802413a48b31d317ecaf6cd7b9a2a8b894ef70619db14193b21aa9e4f12b8a09195fa8327e64261539f58030f3983d068c98c43fb9fb1f3a489a9c937fa40a0b706f7a861a2aa9e29cfc5a5ca9434a25da38a7e6455bd0be779aa0637930737bf3bd62a5d67d4c81ee2750c8d00426cce0dc134ad106059ae742b8da21864298d4369dbd6e15c7eba1ccd398b264a653206f591d9987da0ad189727fd5b6c3636d3577c424bf58ed3a317148fa95e5e9aca0309c1a12d6b2eb42066d7494b3c54a55d2514939eb08773d890152c8d7a79076c9f566d2fbe2413eecd912bd26e92b4ba6ccbd988757fea94f2db39202d91607c4079e5cccead49d816606bf109d696790e9854abaf34fcb2d24bdbc921c30dbb0604615b63e4392cebbbd271be5e3fff1654ec45ca81e4f390762882245fbe09adb42362474bb6d336ad0ade506b429dd52409dba3999059b24b05c77290ce41568ca886eccb6c7f604d5261d005f2fea5a00c33dcfe002becdf9bda7adf88be3a8350e23a304ba1165d0ea9fa1bf9008a317cb879794a0f61764fcda6a68fe2218ebda838a6242c2fc91409a93f1d0925c8258e752026682ab2c9efcf376ef38c60699c1417e4150ebcc540285661f43f10520c23128aa3de1b9aabfae3bd2a399539567909ac11b09adab08ae744cd9ef2831e3b39a9cb6355b1b9981500f0433b29489740b775c3859f64d1472a0fefebee360eb20657321c77911976a6990d42e3c2f68114121ac8fbf39be5175ebeeb001a8ed72a9fcd1d901d213ce56e05fefc7f846516092b115f7fb4ca471896a7553ca2fd86923ff7381703e5af202d68117a603a830642b3d228d8d769e6dcf2bb96450d83e993da403ea330b26faf1df65e5e140d0d5fc6973491cd91d0b2da53c631ae501c3a19b5a94a1723204d1755e3616b4d8e3e4a87722e87cd73880d48d14cd515ddaa54bf797de4cef3b39458600c08cb1f297c146f986740cb6c937d81391ef600cb84e57382c78c563acd2d1703d74341f65d1e2f34f86abf93b566acfdd09a1f45611289d4ef66373882e75780ac555f6d1b18bc978f29c7005b7e14671a67abd408b9149eac26befbdc182fa1626ae7349ae6ee3858d3371e21cc5d3c75614b3245bed02bab7c19de59f5c93987471d9628c509516aa3e15bbd3fb7de6c8d9dbc0bebf70d92b69205e2721bbd0d520177c3245fc62a5eeee2e04f9ad967149bf0888d4104c8428b5a33357cbf6ade56afe98e6ff4451d9d4a18ee4ba40a90b887f1bf00b3b12b6f124e908a7ab2a751665570d88a8f8bbb8c94159643b896e23ffa24542b4ffa576387f30e791b58dc61aa5711c74d37a667bcf8dcc3a36cfbb08b3135aea050fcc854d2eaab35941f85164d8c3fd9461130ea4639ddc88b5e41144d319447fc32b1775ef4a73bf1614e4c73233ad4575849ccad5f03f58d5a3ddcefd516695517f03e898737ac02abb21236f78688450f30ddd0339ee8f65e7c63df1ebefbf53904c9b624e185e22242f7941fb71028d62e44dab5068af8af4ae14c8ba2226eb084e4c1eb550e3547dd666824f2884c7a725d72f2e8dde649d24bbc382eccfae035c953936eba6650c79ced5e70afb93b1e10b1ddd64017ef419046bd05785caf1c84c2232c325c21dbcba87defd4ea6cc58683b8a030bddf935bcb8e4d0c22b43cf0b4f42d6a1e4c6f3372e1185a05e3f82bff3ca98538aa42203ee0abf8b977f547cc4fec7bbd86aaa4cbafe15e4ec33bb2482f015717a0ec7f4b9f376a36a83ff2925e492598a705e74ed6a0678e73b5141dfd51811e56a877d59f934daf9b842f947d64f39510fed315af39446a0fc4ce0e3ed78036b8d0b44543867992bf1782727659cfaaf83890f15a84eaa63c184bd1dc89ff5c0a27b7e86c8a1ed806d6f188a117b9f46d9ace1ef33efce69fe85bba37f7dae34ed230757b66944c24c5e8e24d35a5893845aa1cba0d8df2dd803197535e3379f57ba70eb6b1c388d47d0d6cc0ffda70e7278845724db5134f70005fa40e541bbe8bbc6324d5aa</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-flip">      <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-flip" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-flip" data-content="您好, 此文章需要要密码才可以查看.">您好, 此文章需要要密码才可以查看.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      
-      
-      <categories>
-          
-          <category> PDF密码 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Markdown </tag>
             
         </tags>
       
