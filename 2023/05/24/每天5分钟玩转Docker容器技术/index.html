@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>《每天5分钟玩转Docker容器技术》 | 小H爱分享</title><meta name="author" content="小H"><meta name="copyright" content="小H"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="内容简介 Docker和容器技术是当下热门的IT技术，无论是互联网还是传统企业都在研究和实践如何用容器构建自己的 IT 基础设施。学习本书能够让读者少走弯路，系统地学习、掌握和实践 Docker 和容器技术。 本书共分为三部分。靠前部分介绍容器技术生态环境。第二部分是容器核心知识，包括架构、镜像、容器、网络和存储。第三部分是容器进阶知识，包括多主机管理、跨主机网络方案、监控、日志管理和数据管理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《每天5分钟玩转Docker容器技术》">
+<meta property="og:url" content="https://leenhem.github.io/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:site_name" content="小H爱分享">
+<meta property="og:description" content="内容简介 Docker和容器技术是当下热门的IT技术，无论是互联网还是传统企业都在研究和实践如何用容器构建自己的 IT 基础设施。学习本书能够让读者少走弯路，系统地学习、掌握和实践 Docker 和容器技术。 本书共分为三部分。靠前部分介绍容器技术生态环境。第二部分是容器核心知识，包括架构、镜像、容器、网络和存储。第三部分是容器进阶知识，包括多主机管理、跨主机网络方案、监控、日志管理和数据管理。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://leenhem.github.io/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png">
+<meta property="article:published_time" content="2023-05-24T09:25:46.000Z">
+<meta property="article:modified_time" content="2023-08-04T05:40:24.532Z">
+<meta property="article:author" content="小H">
+<meta property="article:tag" content="PDF下载">
+<meta property="article:tag" content="运维">
+<meta property="article:tag" content="Docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://leenhem.github.io/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://leenhem.github.io/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0ad539c823605aece1ddaeee8696be40";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《每天5分钟玩转Docker容器技术》',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-04 13:40:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png')"><nav id="nav"><span id="blog-info"><a href="/" title="小H爱分享"><span class="site-name">小H爱分享</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《每天5分钟玩转Docker容器技术》</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-24T09:25:46.000Z" title="发表于 2023-05-24 17:25:46">2023-05-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-04T05:40:24.532Z" title="更新于 2023-08-04 13:40:24">2023-08-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/">书籍推荐</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98PDF%E4%B8%8B%E8%BD%BD/">百度网盘PDF下载</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《每天5分钟玩转Docker容器技术》"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png" alt="《每天5分钟玩转Docker容器技术》"></p>
+<h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr>
+<p>Docker和容器技术是当下热门的IT技术，无论是互联网还是传统企业都在研究和实践如何用容器构建自己的 IT 基础设施。学习本书能够让读者少走弯路，系统地学习、掌握和实践 Docker 和容器技术。 本书共分为三部分。靠前部分介绍容器技术生态环境。第二部分是容器核心知识，包括架构、镜像、容器、网络和存储。第三部分是容器进阶知识，包括多主机管理、跨主机网络方案、监控、日志管理和数据管理。读者在学习的过程中，可以跟着教程进行操作，在实践中掌握 Docker 容器技术的核心技能。在之后的工作中，可以将本教程作为参考书，按需查找相关知识点。 本书主要面向微服务软件开发人员，以及 IT 实施和运维工程师等相关人员，也适合高等院校和培训学校相关专业的师生教学参考。</p>
+<h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr>
+<p>CloudMan，十多年 IT 从业经验，就职于国际知名 IT 企业，从事 IT 基础设施实施服务，项目涉及服务器、存储、网络、虚拟化、云技术等各个方面。CloudMan 对新技术长期保持浓厚的兴趣和学习热情，十几年来一直专注 IT 技术领域的钻研与实践。</p>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr>
+<p>第1篇启程<br>第1章鸟瞰容器生态系统3<br>1.1容器生态系统3<br>1.2本教程覆盖的知识范围10<br>1.3准备实验环境10<br>1.3.1环境选择10<br>1.3.2安装Docker10<br>1.4运行第1个容器11<br>1.5小结12<br>第二篇容器技术<br>第2章容器核心知识概述15<br>2.1What——什么是容器15<br>2.2Why——为什么需要容器16<br>2.2.1容器解决的问题16<br>2.2.2Docker的特性20<br>2.2.3容器的优势20<br>2.3How——容器是如何工作的21<br>2.4小结24<br>第3章Docker镜像26<br>3.1镜像的内部结构26<br>3.1.1hello-world——最小的镜像26<br>3.1.2base镜像27<br>3.1.3镜像的分层结构30<br>3.2构建镜像32<br>3.2.1dockercommit32<br>3.2.2Dockerfile34<br>3.3RUNvsCMDvsENTRYPOINT42<br>3.3.1Shell和Exec格式42<br>3.3.2RUN44<br>3.3.3CMD44<br>3.3.4ENTRYPOINT45<br>3.3.5最佳实践46<br>3.4分发镜像46<br>3.4.1为镜像命名46<br>3.4.2使用公共Registry49<br>3.4.3搭建本地Registry51<br>3.5小结52<br>第4章Docker容器55<br>4.1运行容器55<br>4.1.1让容器长期运行56<br>4.1.2两种进入容器的方法57<br>4.1.3运行容器的最佳实践59<br>4.1.4容器运行小结59<br>4.2stop&#x2F;start&#x2F;restart容器60<br>4.3pause&#x2F;unpause容器61<br>4.4删除容器61<br>4.5StateMachine62<br>4.6资源限制65<br>4.6.1内存限额65<br>4.6.2CPU限额66<br>4.6.3BlockIO带宽限额68<br>4.7实现容器的底层技术69<br>4.7.1cgroup70<br>4.7.2namespace70<br>4.8小结72<br>第5章Docker网络74<br>5.1none网络74<br>5.2host网络75<br>5.3bridge网络76<br>5.4user-defined网络78<br>5.5容器间通信84<br>5.5.1IP通信84<br>5.5.2DockerDNSServer85<br>5.5.3joined容器85<br>5.6将容器与外部世界连接87<br>5.6.1容器访问外部世界87<br>5.6.2外部世界访问容器90<br>5.7小结91<br>第6章Docker存储92<br>6.1storagedriver92<br>6.2DataVolume94<br>6.2.1bindmount94<br>6.2.2dockermanagedvolume96<br>6.3数据共享99<br>6.3.1容器与host共享数据99<br>6.3.2容器之间共享数据99<br>6.4volumecontainer100<br>6.5data-packedvolumecontainer102<br>6.6DataVolume生命周期管理103<br>6.6.1备份104<br>6.6.2恢复104<br>6.6.3迁移104<br>6.6.4销毁104<br>6.7小结105<br>第三篇容器进阶知识<br>第7章多主机管理109<br>7.1实验环境描述110<br>7.2安装DockerMachine111<br>7.3创建Machine112<br>7.4管理Machine114<br>第8章容器网络117<br>8.1libnetwork&amp;CNM117<br>8.2overlay119<br>8.2.1实验环境描述120<br>8.2.2创建overlay网络121<br>8.2.3在overlay中运行容器122<br>8.2.4overlay网络连通性124<br>8.2.5overlay网络隔离126<br>8.2.6overlayIPAM127<br>8.3macvlan127<br>8.3.1准备实验环境127<br>8.3.2创建macvlan网络128<br>8.3.3macvlan网络结构分析130<br>8.3.4用sub-interface实现多macvlan网络131<br>8.3.5macvlan网络间的隔离和连通132<br>8.4flannel136<br>8.4.1实验环境描述137<br>8.4.2安装配置etcd137<br>8.4.3buildflannel138<br>8.4.4将flannel网络的配置信息保存到etcd139<br>8.4.5启动flannel139<br>8.4.6配置Docker连接flannel141<br>8.4.7将容器连接到flannel网络143<br>8.4.8flannel网络连通性144<br>8.4.9flannel网络隔离146<br>8.4.10flannel与外网连通性146<br>8.4.11host-gwbackend146<br>8.5weave148<br>8.5.1实验环境描述148<br>8.5.2安装部署weave149<br>8.5.3在host1中启动weave149<br>8.5.4在host1中启动容器150<br>8.5.5在host2中启动weave并运行容器153<br>8.5.6weave网络连通性154<br>8.5.7weave网络隔离155<br>8.5.8weave与外网的连通性156<br>8.5.9IPAM158<br>8.6calico158<br>8.6.1实验环境描述159<br>8.6.2启动etcd159<br>8.6.3部署calico160<br>8.6.4创建calico网络161<br>8.6.5在calico中运行容器161<br>8.6.6calico默认连通性164<br>8.6.7calicopolicy167<br>8.6.8calicoIPAM169<br>8.7比较各种网络方案170<br>8.7.1网络模型171<br>8.7.2DistributedStore171<br>8.7.3IPAM171<br>8.7.4连通与隔离172<br>8.7.5性能172<br>第9章容器监控173<br>9.1Docker自带的监控子命令173<br>9.1.1ps173<br>9.1.2…74<br>9.1.3stats175<br>9.2sysdig175<br>9.3WeaveScope179<br>9.3.1安装179<br>9.3.2容器监控181<br>9.3.3监控host184<br>9.3.4多主机监控186<br>9.4cAdvisor189<br>9.4.1监控DockerHost189<br>9.4.2监控容器191<br>9.5Prometheus194<br>9.5.1架构194<br>9.5.2多维数据模型195<br>9.5.3实践196<br>9.6比较不同的监控工具204<br>9.7几点建议205<br>第10章日志管理207<br>10.1Dockerlogs207<br>10.2Dockerloggingdriver209<br>10.3ELK211<br>10.3.1日志处理流程211<br>10.3.2安装ELK套件212<br>10.3.3Filebeat214<br>10.3.4管理日志216<br>10.4Fluentd220<br>10.4.1安装Fluentd221<br>10.4.2重新配置Filebeat221<br>10.4.3监控容器日志221<br>10.5Graylog222<br>10.5.1Graylog架构222<br>10.5.2部署Graylog223<br>10.5.3配置Graylog225<br>10.5.4监控容器日志227<br>10.6小结229<br>第11章数据管理230<br>11.1从一个例子开始230<br>11.2实践Rex-Raydriver232<br>11.2.1安装Rex-Ray232<br>11.2.2配置VirtualBox234<br>11.2.3创建Rex-Rayvolume236<br>11.2.4使用Rex-Rayvolume237<br>写在最后243</p>
+<h3 id="每天5分钟玩转Docker容器技术-PDF-下载地址"><a href="#每天5分钟玩转Docker容器技术-PDF-下载地址" class="headerlink" title="每天5分钟玩转Docker容器技术 PDF 下载地址:"></a>每天5分钟玩转Docker容器技术 PDF 下载地址:</h3><hr>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1erOEpzOOWo5djAMRMIlPHA?pwd=avvw">https://pan.baidu.com/s/1erOEpzOOWo5djAMRMIlPHA?pwd=avvw</a> </p>
+<p>提取码：avvw</p>
+<p>复制这段内容后打开百度网盘手机App，操作更方便哦</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://leenhem.github.io">小H</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://leenhem.github.io/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/">https://leenhem.github.io/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://leenhem.github.io" target="_blank">小H爱分享</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/PDF%E4%B8%8B%E8%BD%BD/">PDF下载</a><a class="post-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a><a class="post-meta__tags" href="/tags/Docker/">Docker</a></div><div class="post_share"><div class="social-share" data-image="/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.png" target="_blank"><img class="post-qr-code-img" src="/images/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/images/alipay.png" target="_blank"><img class="post-qr-code-img" src="/images/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/24/Kafka%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" title="《Kafka权威指南》"><img class="cover" src="/images/1cf24ea01ffd8c6e8d27b099935eedd4.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">《Kafka权威指南》</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Nginx%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/" title="《深入理解Nginx（第2版）》"><img class="cover" src="/images/586618a77d10293862d1149eba4e03c3.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《深入理解Nginx（第2版）》</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/05/24/Docker%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%B9%E5%99%A8%E4%BA%91%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/" title="《Docker容器与容器云（第2版）》"><img class="cover" src="/images/39k8ibvr7xj60m8z1o8qxwl8gfprwc3f.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-24</div><div class="title">《Docker容器与容器云（第2版）》</div></div></a></div><div><a href="/2023/05/24/Kubernetes%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8EDocker%E5%88%B0Kubernetes%E5%AE%9E%E8%B7%B5%E5%85%A8%E6%8E%A5%E8%A7%A6/" title="《Kubernetes权威指南：从Docker到Kubernetes实践全接触》"><img class="cover" src="/images/lorogawptmcytwkuacpqwzjp.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-24</div><div class="title">《Kubernetes权威指南：从Docker到Kubernetes实践全接触》</div></div></a></div><div><a href="/2023/05/23/DevOps%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/" title="《DevOps实践指南》"><img class="cover" src="/images/c9c87291194e8042c6dd80f9f4756516.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-23</div><div class="title">《DevOps实践指南》</div></div></a></div><div><a href="/2023/05/24/Go%E4%B8%93%E5%AE%B6%E7%BC%96%E7%A8%8B/" title="《Go专家编程》"><img class="cover" src="/images/cq7yazwp20b5ozt21mt39tu5a0y0olui.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-24</div><div class="title">《Go专家编程》</div></div></a></div><div><a href="/2023/05/24/Go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89/" title="《Go并发编程实战（第2版）》"><img class="cover" src="/images/fe6fe0ca4452413f25f54d4132c79620.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-24</div><div class="title">《Go并发编程实战（第2版）》</div></div></a></div><div><a href="/2023/05/24/Go%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/" title="《Go语言高级编程》"><img class="cover" src="/images/o6fkcz9f5pj28fedxj7l7biszkbb6cvf.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-24</div><div class="title">《Go语言高级编程》</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小H</div><div class="author-info__description">PDF推荐下载-专业电子书分享博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">暂无公告
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">内容简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">作者简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-PDF-%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-number">4.</span> <span class="toc-text">每天5分钟玩转Docker容器技术 PDF 下载地址:</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/25/PHP%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/" title="《PHP基础教程（第4版）》"><img src="/images/527efa359c7d12f012639a10b4d00cdd.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《PHP基础教程（第4版）》"/></a><div class="content"><a class="title" href="/2023/07/25/PHP%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/" title="《PHP基础教程（第4版）》">《PHP基础教程（第4版）》</a><time datetime="2023-07-24T16:00:00.000Z" title="发表于 2023-07-25 00:00:00">2023-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/24/Kubernetes%20in%20Action%E4%B8%AD%E6%96%87%E7%89%88/" title="《Kubernetes in Action中文版》"><img src="/images/4311db6aa915c642bafafcf5873fd2d5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《Kubernetes in Action中文版》"/></a><div class="content"><a class="title" href="/2023/05/24/Kubernetes%20in%20Action%E4%B8%AD%E6%96%87%E7%89%88/" title="《Kubernetes in Action中文版》">《Kubernetes in Action中文版》</a><time datetime="2023-05-24T09:46:00.000Z" title="发表于 2023-05-24 17:46:00">2023-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/24/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="《Lua程序设计》"><img src="/images/cf9e4f3d7bd23092d0bd78cf82db10d1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《Lua程序设计》"/></a><div class="content"><a class="title" href="/2023/05/24/Lua%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="《Lua程序设计》">《Lua程序设计》</a><time datetime="2023-05-24T09:37:53.000Z" title="发表于 2023-05-24 17:37:53">2023-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/24/Kafka%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" title="《Kafka权威指南》"><img src="/images/1cf24ea01ffd8c6e8d27b099935eedd4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《Kafka权威指南》"/></a><div class="content"><a class="title" href="/2023/05/24/Kafka%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" title="《Kafka权威指南》">《Kafka权威指南》</a><time datetime="2023-05-24T09:31:14.000Z" title="发表于 2023-05-24 17:31:14">2023-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/" title="《每天5分钟玩转Docker容器技术》"><img src="/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《每天5分钟玩转Docker容器技术》"/></a><div class="content"><a class="title" href="/2023/05/24/%E6%AF%8F%E5%A4%A95%E5%88%86%E9%92%9F%E7%8E%A9%E8%BD%ACDocker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/" title="《每天5分钟玩转Docker容器技术》">《每天5分钟玩转Docker容器技术》</a><time datetime="2023-05-24T09:25:46.000Z" title="发表于 2023-05-24 17:25:46">2023-05-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/images/711ccdbbc82b13f2ef0dd8ef5cb677c5.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 By 小H</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://leenhem.zeabur.app',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://leenhem.zeabur.app',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="255,255,0" opacity="1" zIndex="-10" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "b3ff9930-6a3f-4436-a7b1-e15f49d59f9d";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (true) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
