@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>《Kubernetes修炼手册》</title>
+      <link href="/2023/07/25/Kubernetes%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/"/>
+      <url>/2023/07/25/Kubernetes%E4%BF%AE%E7%82%BC%E6%89%8B%E5%86%8C/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/Z3M0B0C6Q1K2M6S5R2U9Q9B1J0K5L1C2.png" alt="《Kubernetes修炼手册》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>本书是一本Kubernetes入门图书，共分为12章，涵盖了Kubernetes的基础知识，并附带了大量的配置案例。此外，还介绍了Kubernetes架构、构建Kubernetes集群、在Kubernetes上部署和管理应用程序、Kubernetes安全，以及云本地、微服务、容器化等术语的含义。本书在内容上不断进行充实和完善，可以帮助读者快速入门Kubernetes。</p><p>本书适合系统管理员、开发人员，以及对Kubernetes感兴趣的初学者阅读。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>奈吉尔.波尔顿（Nigel Poulton），亚马逊畅销图书作者，存储专家，Docker技术先驱。奈吉尔有丰富的运维技术经验，著有多部容器相关的图书，并开设了视频培训课程，在业界有非常大的影响力。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>第1章 初识Kubernetes 1<br>1.1 Kubernetes的背景 1<br>1.1.1 编排器 1<br>1.1.2 容器化应用 1<br>1.1.3 云原生应用 2<br>1.1.4 微服务应用 2<br>1.2 Kubernetes的诞生 3<br>1.2.1 Kubernetes和Docker 3<br>1.2.2 Kubernetes与Docker Swarm对比 4<br>1.2.3 Kubernetes和Borg：抵抗是徒劳的 5<br>1.2.4 Kubernetes—名字从何而来 5<br>1.3 云操作系统 6<br>1.3.1 云的规模 6<br>1.3.2 应用的调度 7<br>1.3.3 一个简单的模拟 7<br>1.4 总结 7<br>第2章 Kubernetes操作概览 9<br>2.1 Kubernetes概览 9<br>2.1.1 作为集群的Kubernetes 9<br>2.1.2 作为编排器的Kubernetes 10<br>2.1.3 Kubernetes是如何工作的 11<br>2.2 主节点与工作节点 12<br>2.2.1 主节点（控制平面） 12<br>2.2.2 工作节点 15<br>2.3 Kubernetes DNS 17<br>2.4 Kubernetes的应用打包 17<br>2.5 声明式模型与期望状态 18<br>2.6 Pod 20<br>2.6.1 Pod与容器 20<br>2.6.2 Pod深度剖析 21<br>2.6.3 调度单元 22<br>2.6.4 原子操作单位 22<br>2.6.5 Pod的生命周期 22<br>2.7 Deployment 23<br>2.8 服务与稳定的网络 23<br>2.9 总结 26<br>第3章 安装Kubernetes 27<br>3.1 Kubernetes练习环境 27<br>3.2 托管的Kubernetes环境 27<br>3.3 自定义Kubernetes集群 28<br>3.4 安装Kubernetes 28<br>3.5 Play with Kubernetes 28<br>3.6 桌面版Docker 31<br>3.7 Google Kubernetes引擎（GKE） 32<br>3.8 其他安装方法 34<br>3.9 kubectl 34<br>3.10 总结 36<br>第4章 Pod的使用 37<br>4.1 Pod原理 37<br>4.1.1 Pod和容器 38<br>4.1.2 多容器Pod：典型示例 38<br>4.1.3 如何部署Pod 39<br>4.1.4 “解剖”Pod 40<br>4.1.5 Pod与共享网络 40<br>4.1.6 Pod与CGroup 42<br>4.1.7 Pod的原子部署 42<br>4.1.8 Pod的生命周期 42<br>4.1.9 小结 43<br>4.2 Pod实战 43<br>4.2.1 Pod清单文件 44<br>4.2.2 清单文件：共情即代码 45<br>4.2.3 基于清单文件部署Pod 46<br>4.2.4 查看运行中的Pod 46<br>4.2.5 kubectl describe 48<br>4.2.6 kubectl exec：在Pod中执行命令 49<br>4.2.7 kubectl logs 50<br>4.3 总结 50<br>第5章 Kubernetes Deployment 51<br>5.1 Deployment原理 51<br>5.1.1 自愈和扩缩容 52<br>5.1.2 使用Deployment进行滚动升级 54<br>5.1.3 回滚 56<br>5.2 如何创建一个Deployment 56<br>5.2.1 查看Deployment 58<br>5.2.2 访问该应用 59<br>5.3 执行滚动升级 60<br>5.4 执行回滚操作 63<br>5.5 总结 64<br>第6章 Kubernetes Service 65<br>6.1 要点前瞻 65<br>6.2 原理 66<br>6.2.1 Label与松耦合 67<br>6.2.2 Service和Endpoint对象 69<br>6.2.3 从集群内部访问Service 70<br>6.2.4 从集群外部访问Service 70<br>6.2.5 服务发现 72<br>6.2.6 小结 72<br>6.3 Service实战 73<br>6.3.1 命令式 73<br>6.3.2 声明式 76<br>6.4 实例 79<br>6.5 总结 81<br>第7章 服务发现 82<br>7.1 快速入门 82<br>7.2 服务注册 83<br>7.2.1 服务后端 85<br>7.2.2 小结 86<br>7.3 服务发现 86<br>7.3.1 使用集群DNS将名称解析为IP地址 87<br>7.3.2 网络“黑科技” 88<br>7.3.3 小结 89<br>7.4 服务发现与命名空间 90<br>7.5 服务发现问题排查 96<br>7.6 总结 98<br>第8章 Kubernetes存储 99<br>8.1 概述 99<br>8.2 存储提供者 101<br>8.3 容器存储接口（CSI） 101<br>8.4 Kubernetes持久化卷子系统 101<br>8.5 存储类和动态置备 107<br>8.5.1 存储类YAML 108<br>8.5.2 多个存储类 109<br>8.5.3 实现存储类 109<br>8.6 示例 111<br>8.6.1 清理 111<br>8.6.2 创建一个存储类 112<br>8.6.3 创建一个PVC 113<br>8.6.4 清理 114<br>8.6.5 使用默认的StorageClass 115<br>8.7 总结 115<br>第9章 ConfigMap 116<br>9.1 概述 116<br>9.1.1 简单的例子 117<br>9.1.2 例子分析 117<br>9.1.3 解耦的世界 117<br>9.2 ConfigMap原理 118<br>9.2.1 ConfigMap如何工作 119<br>9.2.2 ConfigMap与Kubernetes原生应用 120<br>9.3 ConfigMap实战 120<br>9.3.1 命令式创建ConfigMap 120<br>9.3.2 查看ConfigMap 122<br>9.3.3 声明式创建ConfigMap 123<br>9.3.4 将ConfigMap数据注入Pod和容器 125<br>9.4 总结 129<br>第10章 StatefulSet 130<br>10.1 StatefulSet原理 130<br>10.1.1 StatefulSet中Pod的命名 131<br>10.1.2 按序创建和删除 132<br>10.1.3 删除StatefulSet 133<br>10.1.4 卷 133<br>10.1.5 故障处理 134<br>10.1.6 网络ID和headless Service 134<br>10.2 StatefulSet实战 135<br>10.2.1 部署StorageClass 135<br>10.2.2 创建一个governing headless Service 136<br>10.2.3 部署StatefulSet 137<br>10.2.4 测试点对点发现 140<br>10.2.5 StatefulSet扩缩容 141<br>10.2.6 执行滚动升级 143<br>10.2.7 模拟Pod故障 143<br>10.2.8 删除StatefulSet 145<br>10.3 总结 145<br>第11章 安全模型分析 146<br>11.1 安全模型 146<br>11.2 伪装 146<br>11.2.1 与API Server的安全通信 147<br>11.2.2 Pod间的安全通信 147<br>11.3 篡改 149<br>11.3.1 对Kubernetes组件的篡改 149<br>11.3.2 对运行在Kubernetes中的应用的篡改 150<br>11.4 抵赖 151<br>11.5 信息泄露 153<br>11.5.1 保护集群数据 153<br>11.5.2 保护Pod中的数据 153<br>11.6 拒绝服务 154<br>11.6.1 保护集群资源免于DoS攻击 154<br>11.6.2 保护API Server防范DoS攻击 155<br>11.6.3 保护集群存储防范DoS攻击 155<br>11.6.4 保护应用组件防范DoS攻击 156<br>11.7 提升权限 157<br>11.7.1 保护API Server 157<br>11.7.2 保护Pod 158<br>11.8 Pod安全策略 162<br>11.9 Kubernetes安全展望 164<br>11.10 总结 164<br>第12章 现实中Kubernetes的安全性 165<br>12.1 CI&#x2F;CD流水线 165<br>12.1.1 镜像仓库 165<br>12.1.2 使用已验证的基础镜像 166<br>12.1.3 非标准基础镜像 167<br>12.1.4 控制镜像的访问权限 167<br>12.1.5 从非生产库复制镜像到生产库 168<br>12.1.6 漏洞扫描 168<br>12.1.7 配置即代码 169<br>12.1.8 镜像签名 169<br>12.1.9 镜像晋升工作流 170<br>12.2 基础设施与网络 170<br>12.2.1 集群层负载隔离 170<br>12.2.2 节点隔离 172<br>12.2.3 运行时隔离 172<br>12.2.4 网络隔离 173<br>12.3 身份认证与访问控制管理（IAM） 176<br>12.4 审计与安全监控 177<br>12.4.1 安全配置 177<br>12.4.2 容器与Pod的生命周期事件 178<br>12.4.3 应用的日志 178<br>12.4.4 用户执行的操作 178<br>12.4.5 管理日志数据 179<br>12.4.6 迁移现有App到Kubernetes 179<br>12.5 现实例子 179<br>12.6 总结 180<br>术语表 181<br>延伸 184</p><h3 id="Kubernetes修炼手册-PDF-下载"><a href="#Kubernetes修炼手册-PDF-下载" class="headerlink" title="Kubernetes修炼手册 PDF 下载"></a>Kubernetes修炼手册 PDF 下载</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1UbG_qxRIt91Jjz0lQEprsQ?pwd=fdc2">https://pan.baidu.com/s/1UbG_qxRIt91Jjz0lQEprsQ?pwd=fdc2</a> </p><p>提取码: fdc2 </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 开发 </tag>
+            
+            <tag> Kubernetes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《PHP基础教程（第4版）》</title>
       <link href="/2023/07/25/PHP%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/"/>
       <url>/2023/07/25/PHP%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/</url>
@@ -29,6 +62,39 @@
             <tag> 开发 </tag>
             
             <tag> PHP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《深入剖析Kubernetes》</title>
+      <link href="/2023/07/25/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90Kubernetes/"/>
+      <url>/2023/07/25/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90Kubernetes/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/Q8N1H1Z3X5I2A0K8L6K6M1P1U7I9W7L4.png" alt="《深入剖析Kubernetes》"></p><h3 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h3><hr><p>Kubernetes已成为容器领域当之无愧的事实标准。然而，从过去以物理机和虚拟机为主体的开发运维环境向以容器为核心的基础设施的转变过程，涉及对网络、存储、调度、操作系统、分布式原理等各个方面的容器化理解和改造，很多初学者和从业者在面对容器技术中的种种难题时，要么知识储备不足，要么知识不成体系。本书即为解决这些难题而作，通过深入剖析Kubernetes的本质、核心原理和设计思想，帮你打通学习容器技术的“任督二脉”，让你真正掌握容器技术体系的精髓。</p><h3 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h3><hr><p>张磊，《Docker——容器与容器云》主要作者，CNCF TOC成员，Kubernetes社区成员与早期项目维护者，Kubernetes容器运行时和集群调度等多个核心特性的作者之一，长期专注并活跃于容器集群管理和云计算领域。</p><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr><p>前言 iii<br>第　1章 背景回顾：云原生大事记　2<br>1.1　初出茅庐　2<br>1.2　崭露头角　6<br>1.3　群雄并起　8<br>1.4　尘埃落定　11<br>第　2章 容器技术基础　17<br>2.1　从进程开始说起　17<br>2.2　隔离与限制　21<br>2.3　深入理解容器镜像　27<br>2.4　重新认识Linux容器　36<br>第3章　Kubernetes设计与架构　47<br>3.1　Kubernetes核心设计与架构　47<br>3.2　Kubernetes核心能力与项目定位　51<br>第4章　Kubernetes集群搭建与配置　56<br>4.1　Kubernetes部署利器：kubeadm　56<br>4.2　从0到1：搭建一个完整的Kubernetes集群　63<br>4.3　第 一个Kubernetes应用　73<br>第5章　Kubernetes编排原理　82<br>5.1　为什么我们需要Pod　82<br>5.2　深入解析Pod对象　91<br>5.3　Pod对象使用进阶　96<br>5.4　编排确实很简单：谈谈“控制器”思想　109<br>5.5　经典PaaS的记忆：作业副本与水平扩展　112<br>5.6　深入理解StatefulSet（一）：拓扑状态　121<br>5.7　深入理解StatefulSet（二）：存储状态　127<br>5.8　深入理解StatefulSet（三）：有状态应用实践　133<br>5.9　容器化守护进程：DaemonSet　147<br>5.10　撬动离线业务：Job与CronJob　156<br>5.11　声明式API与Kubernetes编程范式　166<br>5.12　声明式API的工作原理　175<br>5.13　API编程范式的具体原理　185<br>5.14　基于角色的权限控制：RBAC　196<br>5.15　聪明的微创新：Operator 工作原理解读　204<br>第6章　Kubernetes存储原理　217<br>6.1　持久化存储：PV和PVC的设计与实现原理　217<br>6.2　深入理解本地持久化数据卷　226<br>6.3　开发自己的存储插件：FlexVolume与CSI　233<br>6.4　容器存储实践：CSI插件编写指南　242<br>第7章　Kubernetes网络原理　253<br>7.1　单机容器网络的实现原理　253<br>7.2　深入解析容器跨主机网络　260<br>7.3　Kubernetes网络模型与CNI网络插件　268<br>7.4　解读Kubernetes三层网络方案　276<br>7.5　Kubernetes中的网络隔离：NetworkPolicy　285<br>7.6　找到容器不容易：Service、DNS与服务发现　293<br>7.7　从外界连通Service与Service 调试“三板斧”　299<br>7.8　Kubernetes中的Ingress对象　304<br>第8章　Kubernetes调度与资源管理　312<br>8.1　Kubernetes的资源模型与资源管理　312<br>8.2　Kubernetes的默认调度器　317<br>8.3　Kubernetes默认调度器调度策略解析　321<br>8.4　Kubernetes默认调度器的优先级和抢占机制　326<br>8.5　Kubernetes GPU管理与Device Plugin 机制　330<br>第9章　容器运行时　335<br>9.1　幕后英雄：SIG-Node与CRI　335<br>9.2　解读CRI与容器运行时　339<br>9.3　绝不仅仅是安全：Kata Containers与gVisor　343<br>第　10章 Kubernetes监控与日志　349<br>10.1　Prometheus、Metrics Server与Kubernetes监控体系　349<br>10.2　Custom Metrics：让Auto Scaling不再“食之无味”　353<br>10.3　容器日志收集与管理：让日志无处可逃　358<br>第　11章 Kubernetes应用管理进阶　366<br>11.1　再谈Kubernetes的本质与云原生　366<br>11.2　声明式应用管理简介　368<br>11.3　声明式应用管理进阶　370<br>11.4　打造以应用为中心的Kubernetes　374<br>第　12章 Kubernetes开源社区　378<br>结语　Kubernetes：赢开发者赢天下　382</p><h3 id="深入剖析Kubernetes-PDF-下载"><a href="#深入剖析Kubernetes-PDF-下载" class="headerlink" title="深入剖析Kubernetes PDF 下载"></a>深入剖析Kubernetes PDF 下载</h3><hr><p>链接: <a href="https://pan.baidu.com/s/1Pw4QDG5GkwsalZLJPFQ7yQ?pwd=xw66">https://pan.baidu.com/s/1Pw4QDG5GkwsalZLJPFQ7yQ?pwd=xw66</a> </p><p>提取码: xw66 </p><p>复制这段内容后打开百度网盘手机App，操作更方便哦</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 书籍推荐 </category>
+          
+          <category> 百度网盘PDF下载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PDF下载 </tag>
+            
+            <tag> 开发 </tag>
+            
+            <tag> Kubernetes </tag>
             
         </tags>
       
