@@ -4,5 +4,5 @@ https://leenhem.github.io/b.html
 https://leenhem.github.io/a.html
 https://leenhem.github.io/
 https://leenhem.github.io/tags/PDF%E4%B8%8B%E8%BD%BD/
-https://leenhem.github.io/categories/%E8%BF%90%E8%90%A5%E5%95%86%EF%BC%9A%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1/
-https://leenhem.github.io/categories/%E8%BF%90%E8%90%A5%E5%95%86%EF%BC%9A%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1/%E5%BD%92%E5%B1%9E%E5%9C%B0%EF%BC%9A%E9%9A%8F%E6%9C%BA/
+https://leenhem.github.io/categories/%E8%BF%90%E8%90%A5%E5%95%86%EF%BC%9A%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A/
+https://leenhem.github.io/categories/%E8%BF%90%E8%90%A5%E5%95%86%EF%BC%9A%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A/%E5%BD%92%E5%B1%9E%E5%9C%B0%EF%BC%9A%E9%9A%8F%E6%9C%BA/
